@@ -7,7 +7,11 @@
  import com.jfinal.core.Controller;
  import javax.servlet.http.HttpSession;
  
- public class LoginInterceptor extends PrototypeInterceptor
+ /**
+ * @author zhengchangchun
+ * 登陆拦截器,负责权限控制
+ */
+public class LoginInterceptor extends PrototypeInterceptor
  {
    public void doIntercept(ActionInvocation ai)
    {

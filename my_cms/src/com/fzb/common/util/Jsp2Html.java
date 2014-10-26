@@ -12,24 +12,16 @@ import java.net.URLConnection;
 
 /**
  * 将信息发布为静态页面
- * 
  * @author xchun
  * 
  */
-
 public class Jsp2Html {
+	 
 	/**
-	 * 将信息转化为静态html
-	 * 
-	 * @param sSourceUrl
-	 *            动态信息访问URL
-	 * @param sDestDir
-	 *            存储为静态文件的目录
-	 * @param sHtmlFile
-	 *            生成的静态文件名,可以按信息的唯一ID+.html命名
+	 * @param sSourceUrl 原URL
+	 * @param file 需要存储的路径
 	 * @throws IOException
 	 */
-	
 	public static void convert2Html(String sSourceUrl, File file) throws IOException {
 		int HttpResult;
 		URL url = new URL(sSourceUrl);

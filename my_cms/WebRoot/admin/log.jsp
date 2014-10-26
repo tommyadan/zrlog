@@ -66,13 +66,13 @@
 					colNames:['logId','Title','Keywords', 'Name', 'type','releaseTime','edit','delete'],
 					colModel:[
 						{name:'logId',index:'logId', width:40, sorttype:"int", editable: true},
-						{name:'title',index:'title',width:150, sortable:false,editable: true,edittype:"textarea", editoptions:{rows:"2",cols:"20"}},
-						{name:'keywords',index:'keywords', width:100,editable: true,editoptions:{size:"20",maxlength:"30"}},
+						{name:'title',index:'title',width:220, sortable:false,editable: true,edittype:"textarea", editoptions:{rows:"2",cols:"20"}},
+						{name:'keywords',index:'keywords', width:160,editable: true,editoptions:{size:"20",maxlength:"30"}},
 						{name:'userName',index:'userName', width:60, editable: false},
 						{name:'typeName',index:'typeName', width:90, editable: true,edittype:"select",editoptions:{value:"FE:FedEx;IN:InTime;TN:TNT;AR:ARAMEX"}},
-						{name:'releaseTime',index:'releaseTime',width:90, editable:true, sorttype:"date",unformat: pickDate},
-						{name:'logId',index:'logId',formatter:imageFormat},
-						{name:'myac',index:'', width:40, sorttype:"int", editable: true, width:60, fixed:true, sortable:false, resize:false,
+						{name:'releaseTime',index:'releaseTime',width:120, editable:true, sorttype:"date",unformat: pickDate},
+						{name:'logId',width:60,index:'logId',formatter:imageFormat},
+						{name:'myac',index:'',sorttype:"int", editable: true, width:60, fixed:true, sortable:false, resize:false,
 							 formatter: 'actions',
 						      formatoptions: {
 						       keys: true,

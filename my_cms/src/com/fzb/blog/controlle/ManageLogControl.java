@@ -26,6 +26,15 @@ public class ManageLogControl extends ManageControl
   public void write() {
      render("/admin/edit.jsp");
   }
+  public void update(){
+	  Integer logId = null;
+      logId =Integer.parseInt(getPara("logId"));
+	  
+	  Log log=Log.dao.findById(logId);
+	  log.set("content", getPara("content"));
+	 log.update();
+	 renderJson("OK");
+  }
 
   public void oper() {
      if ((getPara("oper") != null) && 
@@ -40,11 +49,7 @@ public class ManageLogControl extends ManageControl
   public void editFrame(){
 	  Map log = new HashMap();
      Integer logId = null;
-     
-      
-       logId =Integer.parseInt(getRequest().getParameter("logId"));
-       System.out.println(logId);
-    
+      logId =Integer.parseInt(getPara("logId"));
      log.putAll(Log.dao.getLogByLogId(logId));
      log.put("lastLog", Log.dao.getLastLog(logId));
      log.put("nextLog", Log.dao.getNextLog(logId));

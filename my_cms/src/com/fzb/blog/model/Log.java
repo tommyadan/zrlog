@@ -52,7 +52,7 @@
    public Map<String, Object> getLogsByPage(int page, int pageSize)
    {
      Map data = new HashMap();
-     String sql = "select l.*,t.typeName,u.userName,(select count(commentId) from comment where logId=l.logId) commentSize from log l inner join user u inner join type t where u.userId=l.userId and t.typeid=l.typeid order by l.logId desc limit ?,?";
+     String sql = "select l.*,t.typeName,t.alias as typeAlias,u.userName,(select count(commentId) from comment where logId=l.logId) commentSize from log l inner join user u inner join type t where u.userId=l.userId and t.typeid=l.typeid order by l.logId desc limit ?,?";
  
      data.put("rows", find(sql, new Object[] { Integer.valueOf(ParseTools.getFirstRecord(page, pageSize)), Integer.valueOf(pageSize) }));
      fillData(page, pageSize, "from log l inner join user u where u.userId=l.userId", data, new Object[0]);
@@ -62,7 +62,7 @@
    public Map<String, Object> getLogsBySort(int page, int pageSize, String typeAlias)
    {
      Map data = new HashMap();
-     String sql = "select l.*,(select count(commentId) from comment where logId=l.logId) commentSize,u.userName from log l inner join user u,type t where u.userId=l.userId and t.typeId=l.typeId and t.alias=? order by l.logId desc limit ?,?";
+     String sql = "select l.*,t.typeName,t.alias  as typeAlias,(select count(commentId) from comment where logId=l.logId) commentSize,u.userName from log l inner join user u,type t where u.userId=l.userId and t.typeId=l.typeId and t.alias=? order by l.logId desc limit ?,?";
      data.put("rows", find(sql, new Object[] { typeAlias, Integer.valueOf(ParseTools.getFirstRecord(page, pageSize)), Integer.valueOf(pageSize) }));
  
      fillData(page, pageSize, "from log l inner join user u,type t where u.userId=l.userId and t.typeId=l.typeId and t.alias=?", data, new Object[] { typeAlias });
@@ -93,21 +93,21 @@
    }
    public Map<String, Object> getLogsByTag(int page, int pageSize, String tag) {
      Map data = new HashMap();
-     String sql = "select l.*,(select count(commentId) from comment where logId=l.logId) commentSize,u.userName from log l inner join user u,type t where u.userId=l.userId and t.typeId=l.typeId and l.keywords like ? order by l.logId desc limit ?,?";
+     String sql = "select l.*,t.typeName,t.alias  as typeAlias,(select count(commentId) from comment where logId=l.logId) commentSize,u.userName from log l inner join user u,type t where u.userId=l.userId and t.typeId=l.typeId and l.keywords like ? order by l.logId desc limit ?,?";
      data.put("rows", find(sql, new Object[] { "%" + tag + "%", Integer.valueOf(ParseTools.getFirstRecord(page, pageSize)), Integer.valueOf(pageSize) }));
      fillData(page, pageSize, "from log l inner join user u,type t where u.userId=l.userId and t.typeId=l.typeId and  l.keywords like ?", data, new Object[] { tag + "%" });
      return data;
    }
    public Map<String, Object> getLogsByData(int page, int pageSize, String date) {
      Map data = new HashMap();
-     String sql = "select l.*,(select count(commentId) from comment where logId=l.logId) commentSize,u.userName from log l inner join user u,type t where u.userId=l.userId and t.typeId=l.typeId and DATE_FORMAT(releaseTime,'%Y_%m')=? order by l.logId desc limit ?,?";
+     String sql = "select l.*,t.typeName,t.alias as typeAlias,(select count(commentId) from comment where logId=l.logId) commentSize,u.userName from log l inner join user u,type t where u.userId=l.userId and t.typeId=l.typeId and DATE_FORMAT(releaseTime,'%Y_%m')=? order by l.logId desc limit ?,?";
      data.put("rows", find(sql, new Object[] { date, Integer.valueOf(ParseTools.getFirstRecord(page, pageSize)), Integer.valueOf(pageSize) }));
      fillData(page, pageSize, "from log l inner join user u,type t where u.userId=l.userId and t.typeId=l.typeId and  DATE_FORMAT(releaseTime,'%Y_%m')=?", data, new Object[] { date });
      return data;
    }
    public Map<String, Object> getLogsByTitleOrContent(int page, int pageSize, String key) {
      Map data = new HashMap();
-     String sql = "select l.*,(select count(commentId) from comment where logId=l.logId) commentSize,u.userName from log l inner join user u,type t where u.userId=l.userId and t.typeId=l.typeId and (l.title like ? or l.content like ?) order by l.logId desc limit ?,?";
+     String sql = "select l.*,t.typeName,t.alias as typeAlias,(select count(commentId) from comment where logId=l.logId) commentSize,u.userName from log l inner join user u,type t where u.userId=l.userId and t.typeId=l.typeId and (l.title like ? or l.content like ?) order by l.logId desc limit ?,?";
      data.put("rows", find(sql, new Object[] { "%" + key + "%", "%" + key + "%", Integer.valueOf(ParseTools.getFirstRecord(page, pageSize)), Integer.valueOf(pageSize) }));
      fillData(page, pageSize, "from log l inner join user u,type t where u.userId=l.userId and t.typeId=l.typeId and (l.title like ? or l.content like ?)", data, new Object[] { "%" + key + "%", "%" + key + "%" });
      return data;

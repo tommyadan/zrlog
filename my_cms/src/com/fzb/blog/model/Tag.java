@@ -71,7 +71,7 @@
      return true;
    }
    public static void main(String[] args) {
-     new Tag().update("xxxxxx,xxx1,xxxxxx", "xxxxxx,xxx");
+     new Tag().update("java", "C#");
    }
  }
 
