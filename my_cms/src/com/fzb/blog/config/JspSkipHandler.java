@@ -21,7 +21,12 @@ import javax.servlet.ServletOutputStream;
  import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
  
- public class JspSkipHandler extends Handler
+ /**
+ * @author zhengchangchun
+ * 用于拦截通过请求 .jsp 后缀的请求 
+ * 如果用户访问的后缀为 .html 的情况下. 第一次又程序进行抓取. 后面的直接跳转到静态文件
+ */
+public class JspSkipHandler extends Handler
  {
    public void handle(String target, HttpServletRequest request, HttpServletResponse response, boolean[] isHandled)
    {
@@ -48,8 +53,9 @@ import javax.servlet.http.HttpServletResponse;
       }
      else
        try {
+    	   // 非法访问 .jsp 的情况下. 返回 
          request.getSession();
-         response.sendRedirect(request.getContextPath() + "/error/403.html");
+         response.sendError(403);
          return;
        } catch (IOException e) {
          e.printStackTrace();

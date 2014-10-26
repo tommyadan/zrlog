@@ -11,7 +11,11 @@
  import com.fzb.blog.controlle.WebSiteControl;
  import com.jfinal.config.Routes;
  
- public class UserRoutes extends Routes
+ /**
+ * @author zhengchangchun
+ * 后台管理者路由
+ */
+public class UserRoutes extends Routes
  {
    public void config()
    {

@@ -27,7 +27,11 @@ import com.jfinal.plugin.c3p0.C3p0Plugin;
 import com.jfinal.plugin.ehcache.EhCachePlugin;
 import com.jfinal.render.ViewType;
  
- public class JFanilConfig extends JFinalConfig
+ /**
+ * @author zhengchangchun
+ *JFinal 一些参数的配置
+ */
+public class JFanilConfig extends JFinalConfig
  {
    public void configConstant(Constants con)
    {
@@ -53,16 +57,18 @@ import com.jfinal.render.ViewType;
  
    public void configPlugin(Plugins plugins)
    {
+	   // 启动时候进行数据库链接,
      loadPropertyFile("db.properties");
      C3p0Plugin c3p0Plugin = new C3p0Plugin(getProperty("jdbcUrl"), 
        getProperty("user"), getProperty("password"));
      try{
+    	 //如果不存在 install.lock 文件的情况下不初始化数据
     	 if(new InstallUtil(PathKit.getWebRootPath()+"/WEB-INF").checkInstall()){}
     	plugins.add(c3p0Plugin);
+    	// 添加QuartzPlugin 用于定时生成 sitemap.xml
     	plugins.add(new EhCachePlugin());
-    	 
         plugins.add(new QuartzPlugin());
-    
+        // 添加表与实体的映射关系
         ActiveRecordPlugin arp = new ActiveRecordPlugin(c3p0Plugin);
         plugins.add(arp);
         arp.addMapping("user", "userId", User.class);
@@ -83,11 +89,12 @@ import com.jfinal.render.ViewType;
  
    public void configRoute(Routes routes)
    {
+	   // 添加浏览者能访问Control 路由
      routes.add("/post", QueryLogControl.class);
      routes.add("/api", APIControl.class);
      routes.add("/", QueryLogControl.class);
-     
      routes.add("/install", InstallControl.class);
+     // 后台管理者
      routes.add(new UserRoutes());
    }
 }

@@ -46,7 +46,7 @@
 				diag.Width = 900;
 				diag.Height = 750;
 				diag.Title = decodeURI(title);
-				diag.URL = "log/edit_frame?logId="+id+"&catalog="+catalog;
+				diag.URL = "log/editFrame?logId="+id;
 				diag.show();
 			}
 		</script>

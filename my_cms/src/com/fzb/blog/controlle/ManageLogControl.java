@@ -37,18 +37,17 @@ public class ManageLogControl extends ManageControl
 
      renderJson("OK");
   }
-  public void edit_frame(){
+  public void editFrame(){
 	  Map log = new HashMap();
      Integer logId = null;
-     try {
-       logId = getParaToInt(0);
-     }
-     catch (NumberFormatException e) {
-       logId = Integer.valueOf(Log.dao.getLogByLogIdAlias(getPara(0)));
-     }
-     log.putAll(Log.dao.getLogByLogId(logId.intValue()));
-     log.put("lastLog", Log.dao.getLastLog(logId.intValue()));
-     log.put("nextLog", Log.dao.getNextLog(logId.intValue()));
+     
+      
+       logId =Integer.parseInt(getRequest().getParameter("logId"));
+       System.out.println(logId);
+    
+     log.putAll(Log.dao.getLogByLogId(logId));
+     log.put("lastLog", Log.dao.getLastLog(logId));
+     log.put("nextLog", Log.dao.getNextLog(logId));
      setAttr("log", log);
 	  render("/admin/edit_frame.jsp");
   }

@@ -108,7 +108,7 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 
 						<li <c:if test="${'edit.jsp'==suburl}">class="active"</c:if>>
 							<a href="edit">
-								<i class="icon-text-width"></i>
+								<i class="icon-edit"></i>
 								<span class="menu-text"> 文章撰写 </span>
 							</a>
 						</li>
@@ -121,14 +121,7 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 							</a>
 						</li>
 
-						<li <c:if test="${'nav.jsp'==suburl}">class="active"</c:if>>
-							<a href="nav" class="dropdown-toggle">
-								<i class="icon-list"></i>
-								<span class="menu-text"> 导航栏管理 </span>
-
-								 
-							</a>
-						</li>
+						
 						<li <c:if test="${'comment.jsp'==suburl}">class="active"</c:if>>
 							<a href="comment" class="dropdown-toggle">
 								<i class="icon-picture"></i>
@@ -137,27 +130,14 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 								 
 							</a>
 						</li>
-						<li <c:if test="${'link.jsp'==suburl}">class="active"</c:if>>
-							<a href="link" class="dropdown-toggle">
-								<i class="icon-list-alt"></i>
-								<span class="menu-text"> 链接管理 </span>
 
-								 
-							</a>
-						</li>
 						 
 
-							<li <c:if test="${'plugin.jsp'==suburl}">class="active"</c:if>>
-							<a href="plugin" class="dropdown-toggle">
-								<i class="icon-edit"></i>
-								<span class="menu-text"> 插件管理 </span>
-								 
-							</a>
-						</li>
+							
 
 						<li <c:if test="${'webSite.jsp'==suburl or 'user.jsp'==suburl}">class="active open"</c:if>>
 							<a href="#" class="dropdown-toggle">
-								<i class="icon-list"></i>
+								<i class="icon-text-width"></i>
 								<span class="menu-text"> 设置  </span>
 
 								<b class="arrow icon-angle-down"></b>
@@ -181,11 +161,10 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 						</li>
 
 
-						<li <c:if test="${'type.jsp'==suburl}">class="active open"</c:if>>
+						<li <c:if test="${'type.jsp'==suburl or 'tag	.jsp'==suburl }">class="active open"</c:if>>
 							<a href="#" class="dropdown-toggle">
 								<i class="icon-list"></i>
-								<span class="icon-tag"> 其他 </span>
-
+								其他
 								<b class="arrow icon-angle-down"></b>
 							</a>
 
@@ -203,7 +182,29 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 										查看标签
 									</a>
 								</li>
+								<li <c:if test="${'link.jsp'==suburl}">class="active"</c:if>>
+							<a href="link" class="dropdown-toggle">
+								<i class="icon-list-alt"></i>
+								<span class="menu-text"> 链接管理 </span>
+							</a>
+						</li>
+						<li <c:if test="${'plugin.jsp'==suburl}">class="active"</c:if>>
+							<a href="plugin" class="dropdown-toggle">
+								<i class="icon-edit"></i>
+								<span class="menu-text"> 插件管理 </span>
+								 
+							</a>
+						</li>
+						<li <c:if test="${'nav.jsp'==suburl}">class="active"</c:if>>
+							<a href="nav" class="dropdown-toggle">
+								<i class="icon-list"></i>
+								<span class="menu-text"> 导航栏管理 </span>
+
+								 
+							</a>
+						</li>
 							</ul>
+						
 						</li>
 						 
 					</ul><!-- /.nav-list -->
