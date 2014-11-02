@@ -67,7 +67,7 @@
 						<FOOTER class="entry-meta">
 							<SPAN class="cat-links"><SPAN
 								class="entry-utility-prep entry-utility-prep-cat-links">发表在</SPAN>
-								<A title="查看'${log.typeName}'中的全部文章" href="${rurl}sort/${log.typeAlias}"
+								<A title="查看'${log.typeName}'中的全部文章" href="${rurl}post/sort/${log.typeAlias}"
 								rel="category tag">${log.typeName}</A> </SPAN> <SPAN class="sep">|
 							</SPAN> <SPAN class="comments-link"><A
 								title="《 ${log.title}》上的评论"
