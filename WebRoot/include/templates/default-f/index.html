@@ -1,0 +1,750 @@
+<!DOCTYPE html><html><head>
+    <title>Specs&#039; Blog-就爱PHP | Object Not Found!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="本小站记录了我在学习PHP/HTML/MySQL/JS等过程中遇到的一些困难，及用到的解决方法，希望可以帮到遇到同样问题的童鞋。">
+    <meta name="keywords" content="9iphp,php,wordpress,mysql,html,css,dede,discuz,Specs,就爱PHP">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="http://9iphp.com/wp-content/themes/9iphp/js/html5shiv.js"></script>
+      <script src="http://9iphp.com/wp-content/themes/9iphp/js/respond.min.js"></script>
+    <![endif]-->
+	<link rel='stylesheet' id='crayon-css'  href='http://9iphp.com/wp-content/plugins/crayon-syntax-highlighter/css/min/crayon.min.css?ver=2.6.8' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-theme-turnwall-css'  href='http://9iphp.com/wp-content/plugins/crayon-syntax-highlighter/themes/turnwall/turnwall.css?ver=2.6.8' type='text/css' media='all' />
+<link rel='stylesheet' id='crayon-font-courier-new-css'  href='http://9iphp.com/wp-content/plugins/crayon-syntax-highlighter/fonts/courier-new.css?ver=2.6.8' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-style-css'  href='http://9iphp.com/wp-content/themes/9iphp/inc/bootstrap-3.2.0/css/bootstrap.min.css?ver=3.2.0' type='text/css' media='all' />
+<link rel='stylesheet' id='awesome-style-css'  href='http://9iphp.com/wp-content/themes/9iphp/inc/font-awesome/css/font-awesome.min.css?ver=4.1.0' type='text/css' media='all' />
+<link rel='stylesheet' id='magnific-popup-style-css'  href='http://9iphp.com/wp-content/themes/9iphp/inc/magnific/magnific-popup.css?ver=2.1.5' type='text/css' media='all' />
+<link rel='stylesheet' id='9iphp-style-css'  href='http://9iphp.com/wp-content/themes/9iphp/style.css?ver=1.3' type='text/css' media='all' />
+<script type='text/javascript' src='http://9iphp.com/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+<script type='text/javascript' src='http://9iphp.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var CrayonSyntaxSettings = {"version":"2.6.8","is_admin":"0","ajaxurl":"http:\/\/9iphp.com\/wp-admin\/admin-ajax.php","prefix":"crayon-","setting":"crayon-setting","selected":"crayon-setting-selected","changed":"crayon-setting-changed","special":"crayon-setting-special","orig_value":"data-orig-value","debug":""};
+var CrayonSyntaxStrings = {"copy":"\u4f7f\u7528 %s \u590d\u5236\uff0c\u4f7f\u7528 %s \u7c98\u8d34\u3002","minimize":"\u70b9\u51fb\u5c55\u5f00\u4ee3\u7801"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://9iphp.com/wp-content/plugins/crayon-syntax-highlighter/js/min/crayon.min.js?ver=2.6.8'></script>
+<script type='text/javascript' src='http://9iphp.com/wp-content/themes/9iphp/js/jquery.min.js?ver=1.11.0'></script>
+<script type='text/javascript' src='http://9iphp.com/wp-content/themes/9iphp/inc/bootstrap-3.2.0/js/bootstrap.min.js?ver=3.2.0'></script>
+<script type='text/javascript' src='http://9iphp.com/wp-content/themes/9iphp/js/jquery.lazyload.js?ver=1.19'></script>
+<script type='text/javascript' src='http://9iphp.com/wp-content/themes/9iphp/inc/magnific/jquery.magnific-popup.js?ver=0.9.9'></script>
+<script type='text/javascript' src='http://9iphp.com/wp-content/themes/9iphp/js/9iphp.js?ver=1.3'></script>
+<script type='text/javascript' src='http://9iphp.com/wp-content/themes/9iphp/js/fixed-top.js?ver=1.3'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://9iphp.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://9iphp.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.0.1" />
+	<style type="text/css">
+	body{ background: #E9F0F4; } 	</style>
+</head>
+<body>
+<div style="background-image: url('http://specs.qiniudn.com/wp-content/uploads/2014/09/bg.jpg')" id="background_pattern"></div><header>
+    <div id="masthead" role="banner" class="hidden-xs">
+		<div class="top-banner">
+			<div class="container">
+									<a class="brand brand-image" href="http://9iphp.com/" title="Specs&#039; Blog-就爱PHP" rel="home">
+						<img src="http://specs.qiniudn.com/wp-content/uploads/2014/08/logo.png" width="200px" height="50px" alt="Specs&#039; Blog-就爱PHP">
+						<h1 class="hidden-xs">							<small>Object Not Found!</small>
+													</h1>
+					</a>
+								<div class="top-social pull-right hidden-xs">
+					<a id="s_sina_weibo" title="新浪微博" target="_blank" href="http://weibo.com/9iphp" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-weibo"></i></a>					<a id="s_tencent_weibo" title="腾讯微博" target="_blank" href="http://t.qq.com/Specs_" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-tencent-weibo"></i></a>					<a id="s_email" title="EMAIL" target="_blank" href="mailto:specs@9iphp.com" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-envelope-o"></i></a>					<a id="s_github" title="GITHUB" target="_blank" href="https://github.com/9IPHP" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-github"></i></a>										<a id="s_rss" title="RSS" target="_blank" href="http://9iphp.com/feed" data-toggle="tooltip" data-placement="bottom"><i class="fa fa-rss-square"></i></a>				</div>
+			</div>
+		</div>
+	</div>
+    <nav id="nav" class="navbar navbar-default container-fluid" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+								<a class="navbar-brand visible-xs" href="http://9iphp.com/" style='padding:2px 10px'>
+											<img src="http://specs.qiniudn.com/wp-content/uploads/2014/08/logo_mini.png" width="150px" height="50px" alt="Specs&#039; Blog-就爱PHP">
+									</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav"><li id="menu-item-6" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item active"><a href="/"><i class="fa fa-home"></i> 首页</a></li><li id="menu-item-880" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children dropdown dropdown"><a class="dropdown-toggle" data-toggle="dropdown"><i class='fa  fa-th'></i> 分类<b class="caret"></b><i class="icon-angle-down"></i></a>
+<ul class="dropdown-menu">
+	<li id="menu-item-74" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://9iphp.com/./web/html"><i class='fa fa-html5'></i> HTML/CSS</a></li>	<li id="menu-item-8" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://9iphp.com/./web/php"><i class='fa  fa-code'></i> PHP</a></li>	<li id="menu-item-75" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://9iphp.com/./web/database"><i class='fa  fa-database'></i> Database</a></li>	<li id="menu-item-77" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://9iphp.com/./web/javascript"><i class='fa  fa-edit'></i> JS/jQuery</a></li>	<li id="menu-item-44" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://9iphp.com/./opensystem/dede"><i class='fa fa-folder'></i> DEDE</a></li>	<li id="menu-item-9" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://9iphp.com/./opensystem/wordpress"><i class='fa fa-wordpress'></i> WordPress</a></li>	<li id="menu-item-1003" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://9iphp.com/./opensystem/thinkphp"><i class='fa fa-bookmark'></i> ThinkPHP</a></li>	<li id="menu-item-125" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://9iphp.com/./linux"><i class='fa fa-linux'></i> Linux</a></li>	<li id="menu-item-299" class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="http://9iphp.com/./events"><i class='fa fa-info-circle'></i> 虾扯蛋</a></li><!--.dropdown-->
+</ul>
+</li><li id="menu-item-840" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://9iphp.com/archives"><i class='fa fa-archive'></i> 归档文章</a></li><li id="menu-item-881" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://9iphp.com/tags"><i class='fa  fa-tags'></i> 标签页</a></li><li id="menu-item-882" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://9iphp.com/guestbook"><i class='fa  fa-comments-o'></i> 留言板</a></li><li id="menu-item-891" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://9iphp.com/about"><i class='fa  fa-user'></i> 关于</a></li><li id="menu-item-1147" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="http://9iphp.com/fa-icons"><i class='fa  fa-font'></i> 字体图标</a></li></ul>                <form action="http://9iphp.com/" method="get" id="searchform" class="navbar-form navbar-right visible-lg" role="search">
+                    <div class="form-group">
+                        <input type="text" name='s' id='s' class="form-control" placeholder="这里有你想要的" x-webkit-speech>
+                        <button class="btn btn-danger" type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                    <!--<button type="submit" class="btn btn-primary">Submit</button>-->
+                </form>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</header>
+<div class="container">
+   <section class="row">
+		<!--[if lt IE 8]>
+		<div id="ie-warning" class="alert alert-danger fade in visible-lg">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<i class="fa fa-warning"></i> 请注意，本博客不支持低于IE8的浏览器，为了获得最佳效果，请下载最新的浏览器，推荐下载 <a href="http://www.google.cn/intl/zh-CN/chrome/" target="_blank"><i class="fa fa-compass"></i> Chrome</a>
+            </div>
+		<![endif]-->
+		        <section class='col-md-8' >
+			<!--首页幻灯片-->
+						<!--首页文章列表模块-->
+            <article class="well clearfix">
+	<header class="entry-header">
+					<a href="http://9iphp.com/opensystem/wordpress/1115.html" class="entry-cover hidden-xs">
+			<img width="1024" height="261" src="http://static.9iphp.com/wp-content/uploads/2014/04/9IPHP-theme-thumb1.png" class="attachment-full wp-post-image" alt="9IPHP-theme-thumb" />			</a>
+				<h1 class="entry-title">
+			<a href="http://9iphp.com/opensystem/wordpress/1115.html" title="基于Bootstrap的响应式WordPress主题 9IPHP 可免费下载了">
+				基于Bootstrap的响应式WordPress主题 9IPHP 可免费下载了				<span class="label label-primary entry-tag">置顶</span>				<span class="label label-danger entry-tag">HOT</span>							</a>
+		</h1>
+		<div class="clearfix entry-meta">
+			<span class="pull-left">
+				<time class="entry-date fa fa-calendar" datetime="2014/08/31 18:57:55">
+					&nbsp;2014/08/31				</time>
+				<span class="dot">|</span>
+				<span class="categories-links fa fa-folder-o"> <a href="http://9iphp.com/./opensystem/wordpress" rel="category tag">Wordpress</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-user"> <a href="http://9iphp.com/author/Specs" title="由Specs发布" rel="author">Specs</a></span>
+			</span>
+			<span class="visible-lg visible-md visible-sm pull-left">
+				<span class="dot">|</span>
+				<span class="fa fa-comments-o comments-link"> <a href="http://9iphp.com/opensystem/wordpress/1115.html#comments">280 条评论</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-eye"> 9016 views</span>
+			</span>
+		</div>
+
+	</header>
+	<div class="entry-summary entry-content clearfix">
+		<p>自制响应式Wordpress主题-9IPHP从4月份开始使用到现在已经过去4个多月的时间了，期间很多朋友曾希望我能够把主题发布出来，但是考虑到主题的不完善等各方面原因，一直没有发布。但是经过4个多月的不断完善，今天终于把主题免费发布了。</p>
+	</div>
+	<footer class="entry-footer clearfix visible-lg visible-md visible-sm">
+		<div class="pull-left footer-tag">
+			<a href="http://9iphp.com/tag/9iphp" rel="tag">9iphp</a> <a href="http://9iphp.com/tag/ajax" rel="tag">Ajax</a> <a href="http://9iphp.com/tag/wordpress-2" rel="tag">wordpress</a> <a href="http://9iphp.com/tag/%e5%93%8d%e5%ba%94%e5%bc%8f" rel="tag">响应式</a>		</div>
+
+
+		<a class="pull-right more-link" href="http://9iphp.com/opensystem/wordpress/1115.html" title="阅读全文">阅读全文&raquo;</a>
+	</footer>
+</article>
+<article class="well clearfix">
+	<header class="entry-header">
+				<h1 class="entry-title">
+			<a href="http://9iphp.com/web/javascript/1191.html" title="[转]IE6/7/8/9不支持placeholder的两种解决办法">
+				[转]IE6/7/8/9不支持placeholder的两种解决办法															</a>
+		</h1>
+		<div class="clearfix entry-meta">
+			<span class="pull-left">
+				<time class="entry-date fa fa-calendar" datetime="2014/11/25 13:04:07">
+					&nbsp;6 天前				</time>
+				<span class="dot">|</span>
+				<span class="categories-links fa fa-folder-o"> <a href="http://9iphp.com/./web/javascript" rel="category tag">JS/jQuery</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-user"> <a href="http://9iphp.com/author/Specs" title="由Specs发布" rel="author">Specs</a></span>
+			</span>
+			<span class="visible-lg visible-md visible-sm pull-left">
+				<span class="dot">|</span>
+				<span class="fa fa-comments-o comments-link"> <a href="http://9iphp.com/web/javascript/1191.html#comments">1 条评论</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-eye"> 82 views</span>
+			</span>
+		</div>
+
+	</header>
+	<div class="entry-summary entry-content clearfix">
+		<a href="http://9iphp.com/web/javascript/1191.html"></a><p>placeholder属性是HTML5 中为input添加的。在input上提供一个占位符，文字形式展示输入字段预期值的提示信息（hint）。该提示会在输入字段为空时显示，并会在字段获得焦点时消失。虽然IE10+支持placeholder属性，它的表现与其它浏览器也不一致。IE10+里鼠标点击时（获取焦点）placeholder文本消失，Firefox/Chrome/Safari点击不消失，而是键盘输入时文本消失。</p>
+	</div>
+	<footer class="entry-footer clearfix visible-lg visible-md visible-sm">
+		<div class="pull-left footer-tag">
+			<a href="http://9iphp.com/tag/jquery" rel="tag">Jquery</a> <a href="http://9iphp.com/tag/placeholder" rel="tag">placeholder</a>		</div>
+
+
+		<a class="pull-right more-link" href="http://9iphp.com/web/javascript/1191.html" title="阅读全文">阅读全文&raquo;</a>
+	</footer>
+</article>
+<div class="ads_index_list"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 自适应-文章 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6074386496019881"
+     data-ad-slot="8202380856"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div><article class="well clearfix">
+	<header class="entry-header">
+				<h1 class="entry-title">
+			<a href="http://9iphp.com/web/javascript/1186.html" title="jQuery+Ajax结果用prepend实现淡入及滑动效果">
+				jQuery+Ajax结果用prepend实现淡入及滑动效果															</a>
+		</h1>
+		<div class="clearfix entry-meta">
+			<span class="pull-left">
+				<time class="entry-date fa fa-calendar" datetime="2014/11/17 16:54:05">
+					&nbsp;13 天前				</time>
+				<span class="dot">|</span>
+				<span class="categories-links fa fa-folder-o"> <a href="http://9iphp.com/./web/javascript" rel="category tag">JS/jQuery</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-user"> <a href="http://9iphp.com/author/Specs" title="由Specs发布" rel="author">Specs</a></span>
+			</span>
+			<span class="visible-lg visible-md visible-sm pull-left">
+				<span class="dot">|</span>
+				<span class="fa fa-comments-o comments-link"> <a href="http://9iphp.com/web/javascript/1186.html#comments">8 条评论</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-eye"> 202 views</span>
+			</span>
+		</div>
+
+	</header>
+	<div class="entry-summary entry-content clearfix">
+		<a href="http://9iphp.com/web/javascript/1186.html"><img class="thumb pull-left" src="http://9iphp.com/wp-content/themes/9iphp/images/lazy_loading.gif" data-original="http://9iphp.com/wp-content/themes/9iphp/timthumb.php?w=220&amp;h=120&amp;src=http://static.9iphp.com/wp-content/uploads/2014/11/jquery-ajax-prepend.png" title="jQuery+Ajax结果用prepend实现淡入及滑动效果" alt="jQuery+Ajax结果用prepend实现淡入及滑动效果"/></a><p>这两天做一个Ajax评论的时候，用 prepend() 方法把结果直接插入到页面上，虽然可以实现功能，但是页面直接多出这么一块东西，效果不是很好，所以就想用 fadeIn() 方法或 slideDown() 方法来把结果展现出来，但是发现直接在 prepend() 方法后接上 fadeIn() 并不管用。</p>
+	</div>
+	<footer class="entry-footer clearfix visible-lg visible-md visible-sm">
+		<div class="pull-left footer-tag">
+			<a href="http://9iphp.com/tag/ajax" rel="tag">Ajax</a> <a href="http://9iphp.com/tag/jquery" rel="tag">Jquery</a>		</div>
+
+
+		<a class="pull-right more-link" href="http://9iphp.com/web/javascript/1186.html" title="阅读全文">阅读全文&raquo;</a>
+	</footer>
+</article>
+<article class="well clearfix">
+	<header class="entry-header">
+				<h1 class="entry-title">
+			<a href="http://9iphp.com/opensystem/wordpress/1185.html" title="Gravatar 头像被墙完美解决办法">
+				Gravatar 头像被墙完美解决办法								<span class="label label-danger entry-tag">HOT</span>							</a>
+		</h1>
+		<div class="clearfix entry-meta">
+			<span class="pull-left">
+				<time class="entry-date fa fa-calendar" datetime="2014/11/17 12:41:40">
+					&nbsp;14 天前				</time>
+				<span class="dot">|</span>
+				<span class="categories-links fa fa-folder-o"> <a href="http://9iphp.com/./opensystem/wordpress" rel="category tag">Wordpress</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-user"> <a href="http://9iphp.com/author/Specs" title="由Specs发布" rel="author">Specs</a></span>
+			</span>
+			<span class="visible-lg visible-md visible-sm pull-left">
+				<span class="dot">|</span>
+				<span class="fa fa-comments-o comments-link"> <a href="http://9iphp.com/opensystem/wordpress/1185.html#comments">11 条评论</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-eye"> 346 views</span>
+			</span>
+		</div>
+
+	</header>
+	<div class="entry-summary entry-content clearfix">
+		<a href="http://9iphp.com/opensystem/wordpress/1185.html"></a><p>9IPHP 主题侧边栏有个“最新评论”的小工具，里面显示了评论者的 Gravatar 头像，但是最近这几天发现头像一直加载不出来了，今天看到一种方法，测试了下，完美解决了问题，记录下来，也分享给大家！</p>
+	</div>
+	<footer class="entry-footer clearfix visible-lg visible-md visible-sm">
+		<div class="pull-left footer-tag">
+			<a href="http://9iphp.com/tag/gravatar" rel="tag">gravatar</a> <a href="http://9iphp.com/tag/wordpress-2" rel="tag">wordpress</a>		</div>
+
+
+		<a class="pull-right more-link" href="http://9iphp.com/opensystem/wordpress/1185.html" title="阅读全文">阅读全文&raquo;</a>
+	</footer>
+</article>
+<article class="well clearfix">
+	<header class="entry-header">
+				<h1 class="entry-title">
+			<a href="http://9iphp.com/journal/1182.html" title="9IPHP-就爱PHP博客备案成功，恢复正常浏览">
+				9IPHP-就爱PHP博客备案成功，恢复正常浏览								<span class="label label-danger entry-tag">HOT</span>							</a>
+		</h1>
+		<div class="clearfix entry-meta">
+			<span class="pull-left">
+				<time class="entry-date fa fa-calendar" datetime="2014/11/12 21:58:12">
+					&nbsp;18 天前				</time>
+				<span class="dot">|</span>
+				<span class="categories-links fa fa-folder-o"> <a href="http://9iphp.com/./journal" rel="category tag">日志</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-user"> <a href="http://9iphp.com/author/Specs" title="由Specs发布" rel="author">Specs</a></span>
+			</span>
+			<span class="visible-lg visible-md visible-sm pull-left">
+				<span class="dot">|</span>
+				<span class="fa fa-comments-o comments-link"> <a href="http://9iphp.com/journal/1182.html#comments">20 条评论</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-eye"> 453 views</span>
+			</span>
+		</div>
+
+	</header>
+	<div class="entry-summary entry-content clearfix">
+		<a href="http://9iphp.com/journal/1182.html"></a><p>9IPHP-就爱PHP博客终于备案成功了，用了差不多半个月时间吧。前些天来访的朋友肯定都遇到了打不开的情况，不过现在好了，一切恢复正常！下载本站主题请直接到 Github ，本站主题 &#8211; 9IPHP 免费提供下载！觉得主题还不错的朋友可以动动手点击下本站的广告来支持，也可直接到 这里 来赞助我一下~</p>
+	</div>
+	<footer class="entry-footer clearfix visible-lg visible-md visible-sm">
+		<div class="pull-left footer-tag">
+			<a href="http://9iphp.com/tag/9iphp" rel="tag">9iphp</a> <a href="http://9iphp.com/tag/%e5%a4%87%e6%a1%88" rel="tag">备案</a>		</div>
+
+
+		<a class="pull-right more-link" href="http://9iphp.com/journal/1182.html" title="阅读全文">阅读全文&raquo;</a>
+	</footer>
+</article>
+<article class="well clearfix">
+	<header class="entry-header">
+					<a href="http://9iphp.com/web/javascript/1178.html" class="entry-cover hidden-xs">
+			<img width="960" height="346" src="http://static.9iphp.com/wp-content/uploads/2014/11/kindeditor1.jpg" class="attachment-full wp-post-image" alt="kindeditor" />			</a>
+				<h1 class="entry-title">
+			<a href="http://9iphp.com/web/javascript/1178.html" title="Kindeditor 4.X版本修改默认字体大小与颜色的方法">
+				Kindeditor 4.X版本修改默认字体大小与颜色的方法															</a>
+		</h1>
+		<div class="clearfix entry-meta">
+			<span class="pull-left">
+				<time class="entry-date fa fa-calendar" datetime="2014/11/06 17:56:31">
+					&nbsp;24 天前				</time>
+				<span class="dot">|</span>
+				<span class="categories-links fa fa-folder-o"> <a href="http://9iphp.com/./web/html" rel="category tag">HTML/CSS</a>,<a href="http://9iphp.com/./web/javascript" rel="category tag">JS/jQuery</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-user"> <a href="http://9iphp.com/author/Specs" title="由Specs发布" rel="author">Specs</a></span>
+			</span>
+			<span class="visible-lg visible-md visible-sm pull-left">
+				<span class="dot">|</span>
+				<span class="fa fa-comments-o comments-link"> <a href="http://9iphp.com/web/javascript/1178.html#comments">3 条评论</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-eye"> 243 views</span>
+			</span>
+		</div>
+
+	</header>
+	<div class="entry-summary entry-content clearfix">
+		<p>KindEditor是一套开源的HTML可视化编辑器，主要用于让用户在网站上获得所见即所得编辑效果，兼容IE、Firefox、Chrome、Safari、Opera等主流浏览器。今天用了下，发现了几个小问题：不能通过配置文件修改默认的字体大小与颜色。</p>
+	</div>
+	<footer class="entry-footer clearfix visible-lg visible-md visible-sm">
+		<div class="pull-left footer-tag">
+			<a href="http://9iphp.com/tag/kindeditor" rel="tag">kindeditor</a> <a href="http://9iphp.com/tag/%e7%bc%96%e8%be%91%e5%99%a8" rel="tag">编辑器</a>		</div>
+
+
+		<a class="pull-right more-link" href="http://9iphp.com/web/javascript/1178.html" title="阅读全文">阅读全文&raquo;</a>
+	</footer>
+</article>
+<article class="well clearfix">
+	<header class="entry-header">
+				<h1 class="entry-title">
+			<a href="http://9iphp.com/web/javascript/1177.html" title="IE8某些情况下不支持jQuery的attr方法的解决办法">
+				IE8某些情况下不支持jQuery的attr方法的解决办法															</a>
+		</h1>
+		<div class="clearfix entry-meta">
+			<span class="pull-left">
+				<time class="entry-date fa fa-calendar" datetime="2014/11/04 11:15:10">
+					&nbsp;27 天前				</time>
+				<span class="dot">|</span>
+				<span class="categories-links fa fa-folder-o"> <a href="http://9iphp.com/./web/javascript" rel="category tag">JS/jQuery</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-user"> <a href="http://9iphp.com/author/Specs" title="由Specs发布" rel="author">Specs</a></span>
+			</span>
+			<span class="visible-lg visible-md visible-sm pull-left">
+				<span class="dot">|</span>
+				<span class="fa fa-comments-o comments-link"> <a href="http://9iphp.com/web/javascript/1177.html#comments">暂无评论</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-eye"> 130 views</span>
+			</span>
+		</div>
+
+	</header>
+	<div class="entry-summary entry-content clearfix">
+		<a href="http://9iphp.com/web/javascript/1177.html"></a><p>今天写程序的时候，用到了 jQuery 中的attr 方法来设置 embed 标签的 src 属性， Chrmoe、firefox等都运行正常，但是测试到 IE8 的时候，令人蛋疼的事出现了，视频的路径竟然没有修改成功！调试发现，视频的路径的获取成功了，但是在用 attr 方法赋值时却没有成功。查看了一些文档，发现IE8下确实存在这样一个BUG。后来找到一种肯定可行的解决方法：通过 html() 方法来重写 embed 标签。</p>
+	</div>
+	<footer class="entry-footer clearfix visible-lg visible-md visible-sm">
+		<div class="pull-left footer-tag">
+			<a href="http://9iphp.com/tag/attr" rel="tag">attr</a> <a href="http://9iphp.com/tag/ie8" rel="tag">IE8</a> <a href="http://9iphp.com/tag/jquery" rel="tag">Jquery</a>		</div>
+
+
+		<a class="pull-right more-link" href="http://9iphp.com/web/javascript/1177.html" title="阅读全文">阅读全文&raquo;</a>
+	</footer>
+</article>
+<article class="well clearfix">
+	<header class="entry-header">
+					<a href="http://9iphp.com/journal/1172.html" class="entry-cover hidden-xs">
+			<img width="650" height="228" src="http://static.9iphp.com/wp-content/uploads/2014/10/website-pause-notice.jpg" class="attachment-full wp-post-image" alt="website-pause-notice" />			</a>
+				<h1 class="entry-title">
+			<a href="http://9iphp.com/journal/1172.html" title="网站因备案即将暂停的公告">
+				网站因备案即将暂停的公告															</a>
+		</h1>
+		<div class="clearfix entry-meta">
+			<span class="pull-left">
+				<time class="entry-date fa fa-calendar" datetime="2014/10/27 17:07:34">
+					&nbsp;2014/10/27				</time>
+				<span class="dot">|</span>
+				<span class="categories-links fa fa-folder-o"> <a href="http://9iphp.com/./journal" rel="category tag">日志</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-user"> <a href="http://9iphp.com/author/Specs" title="由Specs发布" rel="author">Specs</a></span>
+			</span>
+			<span class="visible-lg visible-md visible-sm pull-left">
+				<span class="dot">|</span>
+				<span class="fa fa-comments-o comments-link"> <a href="http://9iphp.com/journal/1172.html#comments">4 条评论</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-eye"> 344 views</span>
+			</span>
+		</div>
+
+	</header>
+	<div class="entry-summary entry-content clearfix">
+		<p>申请的阿里云 “0元/6个月” 已通过审核，近期将关闭网站进行备案。你可以通过IP（115.28.180.12）来进行访问，如要来访请先收藏本IP。</p>
+	</div>
+	<footer class="entry-footer clearfix visible-lg visible-md visible-sm">
+		<div class="pull-left footer-tag">
+			<a href="http://9iphp.com/tag/%e9%98%bf%e9%87%8c%e4%ba%91" rel="tag">阿里云</a>		</div>
+
+
+		<a class="pull-right more-link" href="http://9iphp.com/journal/1172.html" title="阅读全文">阅读全文&raquo;</a>
+	</footer>
+</article>
+<article class="well clearfix">
+	<header class="entry-header">
+				<h1 class="entry-title">
+			<a href="http://9iphp.com/web/javascript/1170.html" title="jQuery 1.9+版本中修改checkbox的check属性但界面显示未选中问题的解决办法">
+				jQuery 1.9+版本中修改checkbox的check属性但界面显示未选中问题的解决办法															</a>
+		</h1>
+		<div class="clearfix entry-meta">
+			<span class="pull-left">
+				<time class="entry-date fa fa-calendar" datetime="2014/10/23 15:00:54">
+					&nbsp;2014/10/23				</time>
+				<span class="dot">|</span>
+				<span class="categories-links fa fa-folder-o"> <a href="http://9iphp.com/./web/javascript" rel="category tag">JS/jQuery</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-user"> <a href="http://9iphp.com/author/Specs" title="由Specs发布" rel="author">Specs</a></span>
+			</span>
+			<span class="visible-lg visible-md visible-sm pull-left">
+				<span class="dot">|</span>
+				<span class="fa fa-comments-o comments-link"> <a href="http://9iphp.com/web/javascript/1170.html#comments">6 条评论</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-eye"> 351 views</span>
+			</span>
+		</div>
+
+	</header>
+	<div class="entry-summary entry-content clearfix">
+		<a href="http://9iphp.com/web/javascript/1170.html"><img class="thumb pull-left" src="http://9iphp.com/wp-content/themes/9iphp/images/lazy_loading.gif" data-original="http://9iphp.com/wp-content/themes/9iphp/timthumb.php?w=220&amp;h=120&amp;src=http://static.9iphp.com/wp-content/uploads/2014/10/checkbox-unchecned.png" title="jQuery 1.9+版本中修改checkbox的check属性但界面显示未选中问题的解决办法" alt="jQuery 1.9+版本中修改checkbox的check属性但界面显示未选中问题的解决办法"/></a><p>经过查找文档，我们发现此方法在 1.9+ 版本中的处理有些不一样。IE10，Chrome,FF中，对于选中状态，第一次 $(&#8216;#checkbox&#8217;).attr(&#8216;checked&#8217;,true) 可以实现，但是当通过代码清除选中，下次再通过代码  $(&#8216;#checkbox&#8217;).attr(&#8216;checked&#8217;,true)  去选中时，虽然代码中有checked=&#8217;checked&#8217;,但是画面表现都没有打勾，E8/IE6下无此问题。</p>
+	</div>
+	<footer class="entry-footer clearfix visible-lg visible-md visible-sm">
+		<div class="pull-left footer-tag">
+			<a href="http://9iphp.com/tag/checkbox" rel="tag">checkbox</a> <a href="http://9iphp.com/tag/jquery" rel="tag">Jquery</a>		</div>
+
+
+		<a class="pull-right more-link" href="http://9iphp.com/web/javascript/1170.html" title="阅读全文">阅读全文&raquo;</a>
+	</footer>
+</article>
+<article class="well clearfix">
+	<header class="entry-header">
+				<h1 class="entry-title">
+			<a href="http://9iphp.com/events/1166.html" title="[转]开发者应该反问自己的10个问题">
+				[转]开发者应该反问自己的10个问题															</a>
+		</h1>
+		<div class="clearfix entry-meta">
+			<span class="pull-left">
+				<time class="entry-date fa fa-calendar" datetime="2014/10/17 10:16:53">
+					&nbsp;2014/10/17				</time>
+				<span class="dot">|</span>
+				<span class="categories-links fa fa-folder-o"> <a href="http://9iphp.com/./events" rel="category tag">虾扯蛋</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-user"> <a href="http://9iphp.com/author/Specs" title="由Specs发布" rel="author">Specs</a></span>
+			</span>
+			<span class="visible-lg visible-md visible-sm pull-left">
+				<span class="dot">|</span>
+				<span class="fa fa-comments-o comments-link"> <a href="http://9iphp.com/events/1166.html#comments">6 条评论</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-eye"> 496 views</span>
+			</span>
+		</div>
+
+	</header>
+	<div class="entry-summary entry-content clearfix">
+		<a href="http://9iphp.com/events/1166.html"><img class="thumb pull-left" src="http://9iphp.com/wp-content/themes/9iphp/images/lazy_loading.gif" data-original="http://9iphp.com/wp-content/themes/9iphp/timthumb.php?w=220&amp;h=120&amp;src=http://static.9iphp.com/wp-content/uploads/2014/10/coder-10-question.jpg" title="[转]开发者应该反问自己的10个问题" alt="[转]开发者应该反问自己的10个问题"/></a><p>你想成为一名web开发者吗？那么，现在是时候放下《24小时学会XXX语言》书，相反，你应当养成每天反问自己以下10个问题的习惯。</p>
+	</div>
+	<footer class="entry-footer clearfix visible-lg visible-md visible-sm">
+		<div class="pull-left footer-tag">
+			<a href="http://9iphp.com/tag/%e7%a8%8b%e5%ba%8f%e5%91%98" rel="tag">程序员</a> <a href="http://9iphp.com/tag/%e7%bc%96%e7%a8%8b" rel="tag">编程</a>		</div>
+
+
+		<a class="pull-right more-link" href="http://9iphp.com/events/1166.html" title="阅读全文">阅读全文&raquo;</a>
+	</footer>
+</article>
+<article class="well clearfix">
+	<header class="entry-header">
+				<h1 class="entry-title">
+			<a href="http://9iphp.com/events/1152.html" title="程序猿 12 个人艰不拆的真相&#8211;说多了都是泪&#8230;">
+				程序猿 12 个人艰不拆的真相&#8211;说多了都是泪&#8230;															</a>
+		</h1>
+		<div class="clearfix entry-meta">
+			<span class="pull-left">
+				<time class="entry-date fa fa-calendar" datetime="2014/10/13 12:58:51">
+					&nbsp;2014/10/13				</time>
+				<span class="dot">|</span>
+				<span class="categories-links fa fa-folder-o"> <a href="http://9iphp.com/./events" rel="category tag">虾扯蛋</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-user"> <a href="http://9iphp.com/author/Specs" title="由Specs发布" rel="author">Specs</a></span>
+			</span>
+			<span class="visible-lg visible-md visible-sm pull-left">
+				<span class="dot">|</span>
+				<span class="fa fa-comments-o comments-link"> <a href="http://9iphp.com/events/1152.html#comments">8 条评论</a></span>
+				<span class="dot">|</span>
+				<span class="fa fa-eye"> 1138 views</span>
+			</span>
+		</div>
+
+	</header>
+	<div class="entry-summary entry-content clearfix">
+		<a href="http://9iphp.com/events/1152.html"><img class="thumb pull-left" src="http://9iphp.com/wp-content/themes/9iphp/images/lazy_loading.gif" data-original="http://9iphp.com/wp-content/themes/9iphp/timthumb.php?w=220&amp;h=120&amp;src=http://static.9iphp.com/wp-content/uploads/2014/10/12-coder-secret-1.png" title="程序猿 12 个人艰不拆的真相&#8211;说多了都是泪&#8230;" alt="程序猿 12 个人艰不拆的真相&#8211;说多了都是泪&#8230;"/></a><p>程序猿 12 个人艰不拆的真相&#8211;说多了都是泪&#8230;</p>
+	</div>
+	<footer class="entry-footer clearfix visible-lg visible-md visible-sm">
+		<div class="pull-left footer-tag">
+			<a href="http://9iphp.com/tag/%e7%9c%9f%e7%9b%b8" rel="tag">真相</a> <a href="http://9iphp.com/tag/%e7%a8%8b%e5%ba%8f%e5%91%98" rel="tag">程序员</a>		</div>
+
+
+		<a class="pull-right more-link" href="http://9iphp.com/events/1152.html" title="阅读全文">阅读全文&raquo;</a>
+	</footer>
+</article>
+			<!--首页文章列表模块-->
+			<!--分页-->
+			<ul class='pagination pull-right'><li class='active'><a href='http://9iphp.com/'>1</a></li><li><a href='http://9iphp.com/page/2'>2</a></li><li><a href='http://9iphp.com/page/3'>3</a></li><li><a href='http://9iphp.com/page/4'>4</a></li><li><a href="http://9iphp.com/page/2" class="next" title="下一页">&gt;</a></li><li><a href='http://9iphp.com/page/17' class='extend' title='尾页'>&raquo;</a></li></ul>        </section>
+        <!--侧边栏-->
+				<aside id="side-bar" class="col-md-4">
+				<div  class="widget widget-notice alert alert-danger fade in visible-lg visible-md"><button type="button" class="close" data-dismiss="alert">&times;</button>主题源码已更新至 GITHUB,欢迎 <a href="https://github.com/9IPHP/9IPHP" target="_blank">STAR</a></div><aside id="specs_recommend-4" class="widget widget_specs_recommend panel panel-specs visible-lg visible-md"><div class="panel-heading"><h2><i class="fa fa-share-alt"></i> 今日分享</h2></div><div class="textwidget"><a href="http://ishare.wang/photos/859" target="_blank"><img src="http://isharewang.qiniudn.com/wp-content/uploads/2014/11/spring-festival-last-90-day-2.jpg"><h3 class="text-center">【90天倒计时】暴露年龄的时刻到了</h3></a></div></aside><aside id="text-6" class="widget widget_text panel panel-specs visible-lg visible-md">			<div class="textwidget"><div style="max-width:319px;"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 自适应-文章 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-6074386496019881"
+     data-ad-slot="8202380856"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></div></div>
+		</aside><aside id="specs_widget_recent_comments-10" class="widget widget_specs_widget_recent_comments panel panel-specs visible-lg visible-md"><div class="panel-heading"><h2><i class="fa fa-comments-o"></i> 最新评论</h2></div><ul class="list-group visible-lg">
+<a class="list-group-item" href="http://9iphp.com/opensystem/wordpress/1115.html#comments" title="发表在 基于Bootstrap的响应式Wordpress主题 9IPHP 可免费下载了"><img alt='' src='http://secure.gravatar.com/avatar/c3cbed8d29be7f8b25a33223848d2c56?s=40&amp;d=http%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /> 博主博主，我的后台文章那能看到缩...&nbsp;</a></span></a>
+<a class="list-group-item" href="http://9iphp.com/opensystem/wordpress/1115.html#comments" title="发表在 基于Bootstrap的响应式Wordpress主题 9IPHP 可免费下载了"><img alt='' src='http://secure.gravatar.com/avatar/0892ef21ee8509c4d2b66723ed198aee?s=40&amp;d=http%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /> 比收费主题都好看  :shock...&nbsp;</a></span></a>
+<a class="list-group-item" href="http://9iphp.com/opensystem/wordpress/1115.html#comments" title="发表在 基于Bootstrap的响应式Wordpress主题 9IPHP 可免费下载了"><img alt='' src='http://secure.gravatar.com/avatar/0284bcbf3981a0b31f1fbc93ab40bff7?s=40&amp;d=http%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /> 你的评论系统我已经扒的差不多了，...&nbsp;</a></span></a>
+<a class="list-group-item" href="http://9iphp.com/opensystem/wordpress/1115.html#comments" title="发表在 基于Bootstrap的响应式Wordpress主题 9IPHP 可免费下载了"><img alt='' src='http://secure.gravatar.com/avatar/f4a3f3bfe74fa4ab2e69df150ecaac35?s=40&amp;d=http%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /> bootstrap就是不错啊，t...&nbsp;</a></span></a>
+<a class="list-group-item" href="http://9iphp.com/opensystem/wordpress/1115.html#comments" title="发表在 基于Bootstrap的响应式Wordpress主题 9IPHP 可免费下载了"><img alt='' src='http://secure.gravatar.com/avatar/a1b7d4acf900e56826a2a48a79c6a94f?s=40&amp;d=http%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /> 还好有大迅雷，这个github用...&nbsp;</a></span></a></ul><ul class="list-group visible-md">
+<a class="list-group-item" href="http://9iphp.com/opensystem/wordpress/1115.html#comments" title="发表在 基于Bootstrap的响应式Wordpress主题 9IPHP 可免费下载了"><img alt='' src='http://secure.gravatar.com/avatar/c3cbed8d29be7f8b25a33223848d2c56?s=40&amp;d=http%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /> 博主博主，我的后台文章那...&nbsp;</a></span></a>
+<a class="list-group-item" href="http://9iphp.com/opensystem/wordpress/1115.html#comments" title="发表在 基于Bootstrap的响应式Wordpress主题 9IPHP 可免费下载了"><img alt='' src='http://secure.gravatar.com/avatar/0892ef21ee8509c4d2b66723ed198aee?s=40&amp;d=http%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /> 比收费主题都好看  :s...&nbsp;</a></span></a>
+<a class="list-group-item" href="http://9iphp.com/opensystem/wordpress/1115.html#comments" title="发表在 基于Bootstrap的响应式Wordpress主题 9IPHP 可免费下载了"><img alt='' src='http://secure.gravatar.com/avatar/0284bcbf3981a0b31f1fbc93ab40bff7?s=40&amp;d=http%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /> 你的评论系统我已经扒的差...&nbsp;</a></span></a>
+<a class="list-group-item" href="http://9iphp.com/opensystem/wordpress/1115.html#comments" title="发表在 基于Bootstrap的响应式Wordpress主题 9IPHP 可免费下载了"><img alt='' src='http://secure.gravatar.com/avatar/f4a3f3bfe74fa4ab2e69df150ecaac35?s=40&amp;d=http%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /> bootstrap就是不...&nbsp;</a></span></a>
+<a class="list-group-item" href="http://9iphp.com/opensystem/wordpress/1115.html#comments" title="发表在 基于Bootstrap的响应式Wordpress主题 9IPHP 可免费下载了"><img alt='' src='http://secure.gravatar.com/avatar/a1b7d4acf900e56826a2a48a79c6a94f?s=40&amp;d=http%3A%2F%2Fsecure.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D40&amp;r=G' class='avatar avatar-40 photo' height='40' width='40' /> 还好有大迅雷，这个git...&nbsp;</a></span></a></ul></aside><aside id="specs_widget_tags-5" class="widget widget_specs_widget_tags panel panel-specs visible-lg visible-md"><div class="panel-heading"><h2><i class="fa fa-tags"></i> 标签云</h2></div><div class="tag_clouds"><a href='http://9iphp.com/tag/wordpress-2' class='tag-link-9' title='26个话题' style='font-size: 14px;'>wordpress</a>
+<a href='http://9iphp.com/tag/php' class='tag-link-2' title='22个话题' style='font-size: 14px;'>PHP</a>
+<a href='http://9iphp.com/tag/dedecms' class='tag-link-34' title='12个话题' style='font-size: 14px;'>dedecms</a>
+<a href='http://9iphp.com/tag/%e5%be%ae%e4%bf%a1' class='tag-link-41' title='10个话题' style='font-size: 14px;'>微信</a>
+<a href='http://9iphp.com/tag/jquery' class='tag-link-116' title='9个话题' style='font-size: 14px;'>Jquery</a>
+<a href='http://9iphp.com/tag/%e7%a8%8b%e5%ba%8f%e5%91%98' class='tag-link-45' title='9个话题' style='font-size: 14px;'>程序员</a>
+<a href='http://9iphp.com/tag/html-2' class='tag-link-25' title='9个话题' style='font-size: 14px;'>html</a>
+<a href='http://9iphp.com/tag/dede-2' class='tag-link-14' title='9个话题' style='font-size: 14px;'>dede</a>
+<a href='http://9iphp.com/tag/linux' class='tag-link-47' title='8个话题' style='font-size: 14px;'>Linux</a>
+<a href='http://9iphp.com/tag/%e7%bb%87%e6%a2%a6' class='tag-link-87' title='7个话题' style='font-size: 14px;'>织梦</a>
+<a href='http://9iphp.com/tag/bootstrap' class='tag-link-142' title='7个话题' style='font-size: 14px;'>Bootstrap</a>
+<a href='http://9iphp.com/tag/9iphp' class='tag-link-201' title='6个话题' style='font-size: 14px;'>9iphp</a>
+<a href='http://9iphp.com/tag/%e5%be%ae%e4%bf%a1%e5%85%ac%e4%bc%97%e5%8f%b7' class='tag-link-169' title='6个话题' style='font-size: 14px;'>微信公众号</a>
+<a href='http://9iphp.com/tag/css' class='tag-link-27' title='6个话题' style='font-size: 14px;'>css</a>
+<a href='http://9iphp.com/tag/javascript-2' class='tag-link-155' title='5个话题' style='font-size: 14px;'>Javascript</a>
+<a href='http://9iphp.com/tag/js' class='tag-link-154' title='5个话题' style='font-size: 14px;'>JS</a>
+<a href='http://9iphp.com/tag/thinkphp' class='tag-link-85' title='4个话题' style='font-size: 14px;'>ThinkPHP</a>
+<a href='http://9iphp.com/tag/%e9%82%ae%e4%bb%b6%e9%80%9a%e7%9f%a5' class='tag-link-267' title='3个话题' style='font-size: 14px;'>邮件通知</a>
+<a href='http://9iphp.com/tag/%e8%87%aa%e5%ae%9a%e4%b9%89%e8%a1%a8%e5%8d%95' class='tag-link-211' title='3个话题' style='font-size: 14px;'>自定义表单</a>
+<a href='http://9iphp.com/tag/chrome' class='tag-link-166' title='3个话题' style='font-size: 14px;'>Chrome</a>
+<a href='http://9iphp.com/tag/%e8%87%aa%e9%80%82%e5%ba%94' class='tag-link-60' title='3个话题' style='font-size: 14px;'>自适应</a>
+<a href='http://9iphp.com/tag/%e5%9b%be%e9%9b%86' class='tag-link-128' title='3个话题' style='font-size: 14px;'>图集</a>
+<a href='http://9iphp.com/tag/%e6%8f%92%e4%bb%b6' class='tag-link-122' title='3个话题' style='font-size: 14px;'>插件</a>
+<a href='http://9iphp.com/tag/mysql-2' class='tag-link-18' title='3个话题' style='font-size: 14px;'>mysql</a>
+<a href='http://9iphp.com/tag/%e6%b5%8f%e8%a7%88%e5%99%a8' class='tag-link-115' title='3个话题' style='font-size: 14px;'>浏览器</a>
+<a href='http://9iphp.com/tag/%e5%93%8d%e5%ba%94%e5%bc%8f' class='tag-link-280' title='3个话题' style='font-size: 14px;'>响应式</a>
+<a href='http://9iphp.com/tag/ajax' class='tag-link-293' title='3个话题' style='font-size: 14px;'>Ajax</a>
+<a href='http://9iphp.com/tag/%e5%85%ac%e4%bc%97%e5%b9%b3%e5%8f%b0' class='tag-link-103' title='2个话题' style='font-size: 14px;'>公众平台</a>
+<a href='http://9iphp.com/tag/apache' class='tag-link-111' title='2个话题' style='font-size: 14px;'>Apache</a>
+<a href='http://9iphp.com/tag/%e6%a0%8f%e7%9b%ae%e5%9b%be%e7%89%87' class='tag-link-104' title='2个话题' style='font-size: 14px;'>栏目图片</a>
+<a href='http://9iphp.com/tag/gravatar' class='tag-link-136' title='2个话题' style='font-size: 14px;'>gravatar</a>
+<a href='http://9iphp.com/tag/%e6%b5%8f%e8%a7%88%e5%99%a8%e7%b1%bb%e5%9e%8b' class='tag-link-151' title='2个话题' style='font-size: 14px;'>浏览器类型</a>
+<a href='http://9iphp.com/tag/%e7%bc%96%e7%a8%8b' class='tag-link-230' title='2个话题' style='font-size: 14px;'>编程</a>
+<a href='http://9iphp.com/tag/%e6%a0%87%e7%ad%be%e9%a1%b5' class='tag-link-215' title='2个话题' style='font-size: 14px;'>标签页</a>
+<a href='http://9iphp.com/tag/%e7%bb%8f%e7%ba%ac%e5%ba%a6' class='tag-link-160' title='2个话题' style='font-size: 14px;'>经纬度</a>
+<a href='http://9iphp.com/tag/api' class='tag-link-159' title='2个话题' style='font-size: 14px;'>API</a>
+<a href='http://9iphp.com/tag/%e6%94%b6%e8%b4%b9' class='tag-link-109' title='2个话题' style='font-size: 14px;'>收费</a>
+<a href='http://9iphp.com/tag/%e7%a4%ba%e4%be%8b' class='tag-link-51' title='2个话题' style='font-size: 14px;'>示例</a>
+<a href='http://9iphp.com/tag/%e5%91%bd%e4%bb%a4' class='tag-link-50' title='2个话题' style='font-size: 14px;'>命令</a>
+<a href='http://9iphp.com/tag/ftp' class='tag-link-97' title='2个话题' style='font-size: 14px;'>FTP</a>
+<a href='http://9iphp.com/tag/%e5%b8%83%e5%b1%80' class='tag-link-28' title='2个话题' style='font-size: 14px;'>布局</a>
+<a href='http://9iphp.com/tag/mongodb-2' class='tag-link-22' title='2个话题' style='font-size: 14px;'>mongodb</a>
+<a href='http://9iphp.com/tag/find' class='tag-link-49' title='2个话题' style='font-size: 14px;'>find</a>
+<a href='http://9iphp.com/tag/ie6' class='tag-link-77' title='2个话题' style='font-size: 14px;'>IE6</a>
+<a href='http://9iphp.com/tag/%e7%94%b5%e5%95%86' class='tag-link-58' title='2个话题' style='font-size: 14px;'>电商</a>
+<a href='http://9iphp.com/tag/%e9%aa%8c%e8%af%81%e7%a0%81' class='tag-link-86' title='2个话题' style='font-size: 14px;'>验证码</a>
+<a href='http://9iphp.com/tag/%e6%a0%87%e7%ad%be' class='tag-link-67' title='2个话题' style='font-size: 14px;'>标签</a>
+<a href='http://9iphp.com/tag/%e7%bc%96%e8%be%91%e5%99%a8' class='tag-link-61' title='2个话题' style='font-size: 14px;'>编辑器</a>
+<a href='http://9iphp.com/tag/301%e8%b7%b3%e8%bd%ac' class='tag-link-15' title='1个话题' style='font-size: 14px;'>301跳转</a>
+<a href='http://9iphp.com/tag/%e7%ab%99%e7%82%b9%e7%bb%9f%e8%ae%a1' class='tag-link-12' title='1个话题' style='font-size: 14px;'>站点统计</a>
+<a href='http://9iphp.com/tag/%e9%bb%98%e8%ae%a4%e5%8f%91%e9%80%81%e9%82%ae%e7%ae%b1' class='tag-link-10' title='1个话题' style='font-size: 14px;'>默认发送邮箱</a>
+<a href='http://9iphp.com/tag/%e9%82%ae%e7%ae%b1' class='tag-link-11' title='1个话题' style='font-size: 14px;'>邮箱</a></div></aside>        <div class="widget widget-posts visible-lg visible-md" id="float">
+            <ul id="myTab" class="nav nav-tabs nav-justified visible-lg">
+                <li class="active"><a href="#hot" data-toggle="tab"><h2><i class="fa fa-fire"></i> 热点文章</h2></a></li>
+                <li><a href="#newest" data-toggle="tab"><h2><i class="fa fa-refresh fa-spin"></i> 最新文章</h2></a></li>
+                <li><a href="#rand" data-toggle="tab"><h2><i class="fa fa-random"></i> 随机文章</h2></a></li>
+            </ul>
+            <ul id="myTab" class="nav nav-tabs nav-justified visible-md">
+                <li class="active"><a href="#hot" data-toggle="tab"><h2><i class="fa fa-fire"></i> 热点</h2></a></li>
+                <li><a href="#newest" data-toggle="tab"><h2><i class="fa fa-refresh fa-spin"></i> 最新</h2></a></li>
+                <li><a href="#rand" data-toggle="tab"><h2><i class="fa fa-random"></i> 随机</h2></a></li>
+            </ul>
+            <div id="myTabContent" class="tab-content">
+                <div class="tab-pane fade in active" id="hot">
+                    <ul class="list-group">
+                        <a class="list-group-item visible-lg" title="9IPHP-就爱PHP博客备案成功，恢复正常浏览" href="http://9iphp.com/journal/1182.html" rel="bookmark">9IPHP-就爱PHP博客备案成功，...<i class="fa fa-comment badge"> 20</i></a><a class="list-group-item visible-md" title="9IPHP-就爱PHP博客备案成功，恢复正常浏览" href="http://9iphp.com/journal/1182.html" rel="bookmark">9IPHP-就爱PHP博...<i class="fa fa-comment badge"> 20</i></a><a class="list-group-item visible-lg" title="Gravatar 头像被墙完美解决办法" href="http://9iphp.com/opensystem/wordpress/1185.html" rel="bookmark">Gravatar 头像被墙完美解决办...<i class="fa fa-comment badge"> 11</i></a><a class="list-group-item visible-md" title="Gravatar 头像被墙完美解决办法" href="http://9iphp.com/opensystem/wordpress/1185.html" rel="bookmark">Gravatar 头像被...<i class="fa fa-comment badge"> 11</i></a><a class="list-group-item visible-lg" title="程序猿 12 个人艰不拆的真相--说多了都是泪..." href="http://9iphp.com/events/1152.html" rel="bookmark">程序猿 12 个人艰不拆的真相--说...<i class="fa fa-comment badge"> 8</i></a><a class="list-group-item visible-md" title="程序猿 12 个人艰不拆的真相--说多了都是泪..." href="http://9iphp.com/events/1152.html" rel="bookmark">程序猿 12 个人艰不拆...<i class="fa fa-comment badge"> 8</i></a><a class="list-group-item visible-lg" title="jQuery+Ajax结果用prepend实现淡入及滑动效果" href="http://9iphp.com/web/javascript/1186.html" rel="bookmark">jQuery+Ajax结果用prep...<i class="fa fa-comment badge"> 8</i></a><a class="list-group-item visible-md" title="jQuery+Ajax结果用prepend实现淡入及滑动效果" href="http://9iphp.com/web/javascript/1186.html" rel="bookmark">jQuery+Ajax结...<i class="fa fa-comment badge"> 8</i></a><a class="list-group-item visible-lg" title="jQuery 1.9+版本中修改checkbox的check属性但界面显示未选中问题的解决办法" href="http://9iphp.com/web/javascript/1170.html" rel="bookmark">jQuery 1.9+版本中修改ch...<i class="fa fa-comment badge"> 6</i></a><a class="list-group-item visible-md" title="jQuery 1.9+版本中修改checkbox的check属性但界面显示未选中问题的解决办法" href="http://9iphp.com/web/javascript/1170.html" rel="bookmark">jQuery 1.9+版...<i class="fa fa-comment badge"> 6</i></a><a class="list-group-item visible-lg" title="[转]开发者应该反问自己的10个问题" href="http://9iphp.com/events/1166.html" rel="bookmark">[转]开发者应该反问自己的10个问题<i class="fa fa-comment badge"> 6</i></a><a class="list-group-item visible-md" title="[转]开发者应该反问自己的10个问题" href="http://9iphp.com/events/1166.html" rel="bookmark">[转]开发者应该反问自己...<i class="fa fa-comment badge"> 6</i></a><a class="list-group-item visible-lg" title="网站因备案即将暂停的公告" href="http://9iphp.com/journal/1172.html" rel="bookmark">网站因备案即将暂停的公告<i class="fa fa-comment badge"> 4</i></a><a class="list-group-item visible-md" title="网站因备案即将暂停的公告" href="http://9iphp.com/journal/1172.html" rel="bookmark">网站因备案即将暂停的公告<i class="fa fa-comment badge"> 4</i></a><a class="list-group-item visible-lg" title="Kindeditor 4.X版本修改默认字体大小与颜色的方法" href="http://9iphp.com/web/javascript/1178.html" rel="bookmark">Kindeditor 4.X版本修改...<i class="fa fa-comment badge"> 3</i></a><a class="list-group-item visible-md" title="Kindeditor 4.X版本修改默认字体大小与颜色的方法" href="http://9iphp.com/web/javascript/1178.html" rel="bookmark">Kindeditor 4...<i class="fa fa-comment badge"> 3</i></a>                    </ul>
+                </div>
+                <div class="tab-pane fade" id="newest">
+                    <ul class="list-group">
+                                                    <a class="list-group-item visible-lg" title="[转]IE6/7/8/9不支持placeholder的两种解决办法" href="http://9iphp.com/web/javascript/1191.html" rel="bookmark">
+                                [转]IE6/7/8/9不支持pla...                                <i class="fa fa-comment badge"> 1</i>
+                            </a>
+                            <a class="list-group-item visible-md" title="[转]IE6/7/8/9不支持placeholder的两种解决办法" href="http://9iphp.com/web/javascript/1191.html" rel="bookmark">
+                                [转]IE6/7/8/9...                                <i class="fa fa-comment badge"> 1</i>
+                            </a>
+                                                    <a class="list-group-item visible-lg" title="jQuery+Ajax结果用prepend实现淡入及滑动效果" href="http://9iphp.com/web/javascript/1186.html" rel="bookmark">
+                                jQuery+Ajax结果用prep...                                <i class="fa fa-comment badge"> 8</i>
+                            </a>
+                            <a class="list-group-item visible-md" title="jQuery+Ajax结果用prepend实现淡入及滑动效果" href="http://9iphp.com/web/javascript/1186.html" rel="bookmark">
+                                jQuery+Ajax结...                                <i class="fa fa-comment badge"> 8</i>
+                            </a>
+                                                    <a class="list-group-item visible-lg" title="Gravatar 头像被墙完美解决办法" href="http://9iphp.com/opensystem/wordpress/1185.html" rel="bookmark">
+                                Gravatar 头像被墙完美解决办...                                <i class="fa fa-comment badge"> 11</i>
+                            </a>
+                            <a class="list-group-item visible-md" title="Gravatar 头像被墙完美解决办法" href="http://9iphp.com/opensystem/wordpress/1185.html" rel="bookmark">
+                                Gravatar 头像被...                                <i class="fa fa-comment badge"> 11</i>
+                            </a>
+                                                    <a class="list-group-item visible-lg" title="9IPHP-就爱PHP博客备案成功，恢复正常浏览" href="http://9iphp.com/journal/1182.html" rel="bookmark">
+                                9IPHP-就爱PHP博客备案成功，...                                <i class="fa fa-comment badge"> 20</i>
+                            </a>
+                            <a class="list-group-item visible-md" title="9IPHP-就爱PHP博客备案成功，恢复正常浏览" href="http://9iphp.com/journal/1182.html" rel="bookmark">
+                                9IPHP-就爱PHP博...                                <i class="fa fa-comment badge"> 20</i>
+                            </a>
+                                                    <a class="list-group-item visible-lg" title="Kindeditor 4.X版本修改默认字体大小与颜色的方法" href="http://9iphp.com/web/javascript/1178.html" rel="bookmark">
+                                Kindeditor 4.X版本修改...                                <i class="fa fa-comment badge"> 3</i>
+                            </a>
+                            <a class="list-group-item visible-md" title="Kindeditor 4.X版本修改默认字体大小与颜色的方法" href="http://9iphp.com/web/javascript/1178.html" rel="bookmark">
+                                Kindeditor 4...                                <i class="fa fa-comment badge"> 3</i>
+                            </a>
+                                                    <a class="list-group-item visible-lg" title="IE8某些情况下不支持jQuery的attr方法的解决办法" href="http://9iphp.com/web/javascript/1177.html" rel="bookmark">
+                                IE8某些情况下不支持jQuery的...                                <i class="fa fa-comment badge"> 0</i>
+                            </a>
+                            <a class="list-group-item visible-md" title="IE8某些情况下不支持jQuery的attr方法的解决办法" href="http://9iphp.com/web/javascript/1177.html" rel="bookmark">
+                                IE8某些情况下不支持j...                                <i class="fa fa-comment badge"> 0</i>
+                            </a>
+                                                    <a class="list-group-item visible-lg" title="网站因备案即将暂停的公告" href="http://9iphp.com/journal/1172.html" rel="bookmark">
+                                网站因备案即将暂停的公告                                <i class="fa fa-comment badge"> 4</i>
+                            </a>
+                            <a class="list-group-item visible-md" title="网站因备案即将暂停的公告" href="http://9iphp.com/journal/1172.html" rel="bookmark">
+                                网站因备案即将暂停的公告                                <i class="fa fa-comment badge"> 4</i>
+                            </a>
+                                                    <a class="list-group-item visible-lg" title="jQuery 1.9+版本中修改checkbox的check属性但界面显示未选中问题的解决办法" href="http://9iphp.com/web/javascript/1170.html" rel="bookmark">
+                                jQuery 1.9+版本中修改ch...                                <i class="fa fa-comment badge"> 6</i>
+                            </a>
+                            <a class="list-group-item visible-md" title="jQuery 1.9+版本中修改checkbox的check属性但界面显示未选中问题的解决办法" href="http://9iphp.com/web/javascript/1170.html" rel="bookmark">
+                                jQuery 1.9+版...                                <i class="fa fa-comment badge"> 6</i>
+                            </a>
+                                            </ul>
+                </div>
+                <div class="tab-pane fade" id="rand">
+                    <ul class="list-group">
+                                                    <a class="list-group-item visible-lg" title="要执行请求的操作，WordPress 需要访问您网页服务器的权限。 请输入您的 FTP 登录XXXX完美解决方法" href="http://9iphp.com/opensystem/wordpress/377.html" rel="bookmark">
+                                要执行请求的操作，WordPress...                                <i class="fa fa-comment badge"> 0</i>
+                            </a>
+                            <a class="list-group-item visible-md" title="要执行请求的操作，WordPress 需要访问您网页服务器的权限。 请输入您的 FTP 登录XXXX完美解决方法" href="http://9iphp.com/opensystem/wordpress/377.html" rel="bookmark">
+                                要执行请求的操作，Wor...                                <i class="fa fa-comment badge"> 0</i>
+                            </a>
+                                                    <a class="list-group-item visible-lg" title="文件类型与MIME类型的对照表" href="http://9iphp.com/web/html/382.html" rel="bookmark">
+                                文件类型与MIME类型的对照表                                <i class="fa fa-comment badge"> 0</i>
+                            </a>
+                            <a class="list-group-item visible-md" title="文件类型与MIME类型的对照表" href="http://9iphp.com/web/html/382.html" rel="bookmark">
+                                文件类型与MIME类型的...                                <i class="fa fa-comment badge"> 0</i>
+                            </a>
+                                                    <a class="list-group-item visible-lg" title="DEDE Fatal error: Call to a member function GetInnerText() " href="http://9iphp.com/opensystem/dede/685.html" rel="bookmark">
+                                DEDE Fatal error: ...                                <i class="fa fa-comment badge"> 8</i>
+                            </a>
+                            <a class="list-group-item visible-md" title="DEDE Fatal error: Call to a member function GetInnerText() " href="http://9iphp.com/opensystem/dede/685.html" rel="bookmark">
+                                DEDE Fatal e...                                <i class="fa fa-comment badge"> 8</i>
+                            </a>
+                                                    <a class="list-group-item visible-lg" title="织梦图片集上传图片不能上传 弹出提示“302”的解决办法" href="http://9iphp.com/opensystem/dede/765.html" rel="bookmark">
+                                织梦图片集上传图片不能上传 弹出提示...                                <i class="fa fa-comment badge"> 5</i>
+                            </a>
+                            <a class="list-group-item visible-md" title="织梦图片集上传图片不能上传 弹出提示“302”的解决办法" href="http://9iphp.com/opensystem/dede/765.html" rel="bookmark">
+                                织梦图片集上传图片不能上...                                <i class="fa fa-comment badge"> 5</i>
+                            </a>
+                                                    <a class="list-group-item visible-lg" title="mysql存储过程详解" href="http://9iphp.com/web/database/269.html" rel="bookmark">
+                                mysql存储过程详解                                <i class="fa fa-comment badge"> 0</i>
+                            </a>
+                            <a class="list-group-item visible-md" title="mysql存储过程详解" href="http://9iphp.com/web/database/269.html" rel="bookmark">
+                                mysql存储过程详解                                <i class="fa fa-comment badge"> 0</i>
+                            </a>
+                                                    <a class="list-group-item visible-lg" title="jQuery+Ajax结果用prepend实现淡入及滑动效果" href="http://9iphp.com/web/javascript/1186.html" rel="bookmark">
+                                jQuery+Ajax结果用prep...                                <i class="fa fa-comment badge"> 8</i>
+                            </a>
+                            <a class="list-group-item visible-md" title="jQuery+Ajax结果用prepend实现淡入及滑动效果" href="http://9iphp.com/web/javascript/1186.html" rel="bookmark">
+                                jQuery+Ajax结...                                <i class="fa fa-comment badge"> 8</i>
+                            </a>
+                                                    <a class="list-group-item visible-lg" title="使用DEDECMS织梦自带的邮件功能实现自定义表单邮件通知(方法二)" href="http://9iphp.com/opensystem/dede/1054.html" rel="bookmark">
+                                使用DEDECMS织梦自带的邮件功能...                                <i class="fa fa-comment badge"> 11</i>
+                            </a>
+                            <a class="list-group-item visible-md" title="使用DEDECMS织梦自带的邮件功能实现自定义表单邮件通知(方法二)" href="http://9iphp.com/opensystem/dede/1054.html" rel="bookmark">
+                                使用DEDECMS织梦自...                                <i class="fa fa-comment badge"> 11</i>
+                            </a>
+                                                    <a class="list-group-item visible-lg" title="推荐几个jQuery的CDN公共库" href="http://9iphp.com/web/javascript/655.html" rel="bookmark">
+                                推荐几个jQuery的CDN公共库                                <i class="fa fa-comment badge"> 2</i>
+                            </a>
+                            <a class="list-group-item visible-md" title="推荐几个jQuery的CDN公共库" href="http://9iphp.com/web/javascript/655.html" rel="bookmark">
+                                推荐几个jQuery的C...                                <i class="fa fa-comment badge"> 2</i>
+                            </a>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+        		</aside>
+		    </section>
+</div>
+<footer id="body-footer">
+    <div  class="container clearfix">
+        Copyright © 2014 Specs&#039; Blog-就爱PHP |
+        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000068169'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000068169' type='text/javascript'%3E%3C/script%3E"));</script> |         图片存储<a href="https://portal.qiniu.com/signup?code=3lia9mi88defm" target="_blank" title="七牛云存储">七牛</a> |
+        <a href="http://9iphp.com/sitemap.html" target="_blank" title="站点地图">站点地图</a> |
+	<a href="http://www.miitbeian.gov.cn/" target="_blank">冀ICP备14020811号-2</a> | 
+        Theme By <a href="http://9iphp.com" title="Specs' Bolg" target="_blank">Specs</a>
+    </div>
+    <ul id="jump" class="visible-lg">
+        <li>
+            <a id="weixin" title="微信公众号" href="javascript:void(0)">
+                <i class="fa fa-wechat"></i><div id="EWM"><img src="http://9iphp.com/wp-content/themes/9iphp/images/weixin_code.jpg" alt="二维码" /></div>
+            </a>
+        </li>
+        <!--<li><a id="share" title="意见反馈" href="http://9iphp.com/guestbook" target="_blank"><i class="fa fa-share-square-o"></i></a></li>-->
+        <li><a id="share" title="友情链接" href="http://9iphp.com/links" target="_blank"><i class="fa fa-link"></i></a></li>
+        <li><a id="top" href="#top" title="返回顶部" style="display:none;"><i class="fa fa-arrow-circle-up"></i></a></li>
+    </ul>
+</footer>
+<script type="text/javascript">// <![CDATA[
+$.fn.smartFloat = function() {
+    var position = function(element) {
+        var top = element.position().top, pos = element.css("position");
+        $(window).scroll(function() {
+            var scrolls = $(this).scrollTop();
+            if (scrolls > top) {
+                if (window.XMLHttpRequest) {
+                    element.css({
+                        position: "fixed",
+                        top: "65px"
+                    });
+                } else {
+                    element.css({
+                        top: scrolls
+                    });
+                }
+            }else {
+                element.css({
+                    position: pos,
+                    top: top
+                });
+            }
+        });
+    };
+    return $(this).each(function() {
+        position($(this));
+    });
+};
+
+//绑定
+$("#float").smartFloat();
+// ]]></script>
+
+</body>
+</html>

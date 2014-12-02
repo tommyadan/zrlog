@@ -31,7 +31,7 @@
 	</c:choose>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" media="screen" href="${url }/css/common.css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="${url }/css/style_2014.css?v201409" />
+  <link rel="stylesheet" type="text/css" media="screen" href="${url}/css/style_2014.css?v201409" />
   <!-- Begin highlightjs -->
   <link rel="stylesheet" href="${url }/js/highlight/styles/github.css">
   <!-- // End highlightjs -->
