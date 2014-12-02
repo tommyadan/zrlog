@@ -1,17 +1,13 @@
 ﻿<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-	<ASIDE>
-		<div class="widget search">
- 			 <form id="searchform" action="/" method="get">
-			<p class="search_input"><input type="text" onblur="OnExit(this)" onfocus="OnEnter(this)" size="15" name="q" title="输入关键字，Enter 键搜索" value="搜索关键字..." class="inputtext"><input type="submit" class="btn" value="搜索"></p>
-				</form>  
-  		</div>
+<DIV class="widget-area" id="secondary" role="complementary">
+	<ASIDE class="widget widget_recent_entries" id="recent-posts-2">
 		<c:choose>
 			<c:when test="${not empty init.plugins}">
 				<c:forEach var="plugin" items="${init.plugins}">
 					<c:choose>
 						<c:when test="${plugin.isSystem==false and pageLevel>=plugin.level}">
-		<div class="widget">
+		<div class="widget-title">
 			<h3>${plugin.pTitle}</h3>
 			<p>${plugin.content}</p>
 			<br />
@@ -20,22 +16,20 @@
 						<c:otherwise>
 							<c:choose>
 								<c:when test="${plugin.pluginName eq 'types' }">
-		<div class="widget">
+		<div class="widget-title">
 			<h3>
 				<c:out value="${plugin.pTitle}" />
 			</h3>
-			<div class="list">
-			<ul class="category_list">
+			<ul>
 				<c:forEach var="type" items="${init.types}">
 					<li><a href="${rurl}post/sort/${type.alias}">${type.typeName} (${type.typeamount})</a>
 					</li>
 				</c:forEach>
 			</ul>
-			</div>
 		</div>
 								</c:when>
 								<c:when test="${plugin.pluginName eq 'links' and pageLevel>=plugin.level}">
-		<div class="widget">
+		<div class="widget-title">
 			<h3>
 				<c:out value="${plugin.pTitle}" />
 			</h3>
@@ -47,7 +41,7 @@
 		</div>
 								</c:when>
 								<c:when test="${plugin.pluginName eq 'archives'}">
-		<div class="widget">
+		<div class="widget-title">
 			<h3>
 				<c:out value="${plugin.pTitle}" />
 			</h3>
@@ -90,7 +84,6 @@
 			a.size6{padding:2px;font-size:12px;color:#77625E}
 			a.size6:hover{color:#E13728;}
 		</style>
-		<div class="widget">
 		<h3>
 				<c:out value="${plugin.pTitle}" />
 		</h3>
@@ -98,7 +91,6 @@
 			 <c:forEach items="${init.tags}" var="tag">
 				<a href="${rurl}post/tag/${tag.text}" title="${tag.text}上共有(${tag.count})文章">${tag.text}</a>
 			 </c:forEach>
-		</div>
 		</div>
 								</c:when>
 							</c:choose>
@@ -108,4 +100,6 @@
 				</c:forEach>
 			</c:when>
 		</c:choose>
+
 	</aside>
+</div>

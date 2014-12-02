@@ -33,215 +33,45 @@
 			<!-- #primary -->
 	</c:when>
 	<c:otherwise>
+	<div class="main clearfloat">
+		<section>
+      <!--[if lt IE 9]>
+      <div class="tips not-ie" id="tipsWrap">
+        <span class="close" id="clostBtn" title="Close">关闭</span>
+        <div class="tips-content">
+          <span class="notice">为了您有更好的浏览体验，请升级使用以下浏览器：</span><span class="browsers"><a href="http://www.google.com/chrome" class="chrome" title="谷歌浏览器">Chrome</a><a href="http://www.mozilla.org/en-US/firefox/new/" class="ff" title="火狐">Firefox</a><a href="http://www.opera.com/download/" class="opera" title="Opera">Opera</a><a href="http://www.apple.com/safari/download/" class="safari" title="Safari">Safari</a></span>
+        </div>
+        <script>$('#clostBtn').click( function(){ $('#tipsWrap').css('display','none'); } ); </script>
+      </div>
+      <![endif]--> 
+        
+          <article>
 
-		<DIV id="main">
-			<DIV id="primary">
-				<DIV id="content" role="main">
-					<NAV id="nav-single">
-						<H3 class="assistive-text">文章导航</H3>
-						<span class="nav-previous"><a
-							href="${rurl }post/${log.lastLog.alias}"
-							title="${log.lastLog.title}" rel="prev"><span
-								class="meta-nav">&larr;</span> 上一篇</a> </span> <span class="nav-next"><a
-							href="${rurl }post/${log.nextLog.alias}"
-							title="${log.nextLog.title}" rel="next">下一篇 <span
-								class="meta-nav">&rarr;</span> </a> </span>
-					</NAV>
-					<ARTICLE
-						class="post-33 post type-post status-publish format-standard hentry category-seo"
-						id="post-33">
-						<HEADER class="entry-header">
-							<H1 class="entry-title">${log.title }</H1>
-							<DIV class="entry-meta">
-								<SPAN class="sep">发表于 </SPAN><A href="${rurl}post/${log.alias}"
-									rel="bookmark"><time class="entry-date" pubdate=""
-										datetime="${log.releaseTime}">${log.releaseTime.year+1900}年${log.releaseTime.month+1}月${log.releaseTime.date}日</time>
-								</A>
-							</DIV>
-
-						</HEADER>
-
-						<DIV class="entry-content">
-							<P>${log.content}</P>
-						</DIV>
-						<FOOTER class="entry-meta">
-							此条目是由 <A href="${rurl}${log.userName}">${log.userName} </A> 发表在 <A
-								title="查看${log.typeName}中的全部文章"
-								href="${rurl}post/sort/${log.typeAlias}" rel="category tag">${log.typeName}</A>
-							分类目录的
-							<c:if test="${not empty log.keywords}">，并贴了 <c:forTokens
-									items="${log.keywords}" delims="," var="tag">
-									<a href="${rurl}post/tag/${tag}" rel="tag">${tag}</a>&nbsp;</c:forTokens>
-			         标签 </c:if>
-							。
-						</FOOTER>
-
-					</ARTICLE>
-<script type="text/javascript" >BAIDU_CLB_SLOT_ID = "903239";</script>
-<script type="text/javascript" src="http://cbjs.baidu.com/js/o.js"></script>
-<br/>
-					<DIV id="copyinfo">
-						<P>
-							<A title="${log.title}" href="${rurl}post/${log.alias}"
-								target="_blank"><SPAN style="color: rgb(51, 102, 255);"
-								span="">${log.title}</SPAN> </A> 转载请注明作者和出处(${webs.title})，并添加本页链接。<BR>原文链接:
-							<A title="${log.title }" href="${rurl}post/${log.alias}"><SPAN
-								style="color: rgb(51, 102, 255);" span="">${rurl}post/${log.alias}</SPAN>
-							</A>
-						</P>
-					</DIV>
-					<!-- JiaThis Button BEGIN -->
-					<div class="jiathis_style_32x32">
-						<a class="jiathis_button_tsina"></a> <a class="jiathis_button_tqq"></a>
-						<a class="jiathis_button_qzone"></a> <a
-							class="jiathis_button_renren"></a> <a
-							class="jiathis_button_kaixin001"></a> <a
-							class="jiathis_button_cqq"></a> <a class="jiathis_button_xianguo"></a>
-						<a class="jiathis_button_douban"></a> <a
-							class="jiathis_button_fav"></a> <a class="jiathis_button_email"></a>
-						<a href="http://www.jiathis.com/share?uid=1703951"
-							class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis"
-							target="_blank"></a> <a class="jiathis_counter_style"></a>
-					</div>
-					<script type="text/javascript">
-			var jiathis_config={
-				data_track_clickback:true,
-				summary:"",
-				appkey:{
-					"tsina":"3945409817",
-					"tqq":"801275436"
-				},
-				hideMore:false
-			}
-			</script>
-					<script type="text/javascript"
-						src="http://v3.jiathis.com/code/jia.js?uid=1703951"
-						charset="utf-8"></script>
-					<!-- JiaThis Button END -->
-					<BR> <BR>
-					<div id="wumiiDisplayDiv"></div>
-					<div id="comments">
+  
 
 
-						<c:choose>
-							<c:when test="${log.canComment}">
-								<c:choose>
-									<c:when test="${not empty requestScope.comm}">
-										<c:forEach var="comm" items="${requestScope.comm}">
-
-											<h2 id="comments-title">
-												《<span>${log.title }</span>》上有 ${log.commentSize} 条评论
-											</h2>
-											<ol class="commentlist">
-
-												<li class="comment even thread-even depth-1"
-													id="li-comment-${comm.cnt }">
-													<article id="comment-${comm.cnt }" class="comment">
-														<footer class="comment-meta">
-															<div class="comment-author vcard">
-																<img alt=''
-																	src='http://0.gravatar.com/avatar/42fce334be587ecf8482176896bda897?s=68&amp;d=http%3A%2F%2F0.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D68&amp;r=G'
-																	class='avatar avatar-68 photo' height='68' width='68' /><span
-																	class="fn"><a href='${comm.userHome }'
-																	rel='external nofollow' class='url'>${comm.userName}</a>
-																</span> 在 <a href="${rurl}/${log.aliasT}#comment-${comm.cnt }"><time
-																		pubdate datetime="${comm.commTime}">${comm.commTime.year+1900
-																		}年${comm.commTime.month+1}月${comm.commTime.date}日
-																		${comm.commTime.hours} : ${comm.commTime.minutes}</time> </a> <span
-																	class="says">说道：</span>
-															</div>
+  <h1 class="post-title">${log.title}</h1>
 
 
-
-														</footer>
-
-														<div class="comment-content">
-															c
-															<p>${comm.userComment}</p>
-														</div>
-
-														<div class="reply">
-															<a class='comment-reply-link'
-																href='${rurl}/${log.aliasT}?replytocom=${comm.cnt }#respond'
-																onclick='return addComment.moveForm("comment-${comm.cnt }", "${comm.cnt }", "respond", "${log.aliasT}")'>回复
-																<span>&darr;</span> </a>
-														</div>
-
-													</article></li>
-
-											</ol>
-										</c:forEach>
-									</c:when>
-									<c:otherwise></c:otherwise>
-								</c:choose>
-							</c:when>
-							<c:otherwise></c:otherwise>
-						</c:choose>
-
-						<c:choose>
-							<c:when test="${log.canComment}">
-								<c:choose>
-									<c:when test="${init.webSite.user_comment_pluginStatus==1}">
-										<!-- Duoshuo Comment BEGIN -->
-										<div class="ds-thread" data-thread-key="${log.logId}"
-											data-title="${log.tilte }"
-											data-url="${rurl}post/${log.alias}"></div>
-										<script type="text/javascript">
-						var duoshuoQuery = {short_name:"xchun"};
-							(function() {
-								var ds = document.createElement('script');
-								ds.type = 'text/javascript';ds.async = true;
-								ds.src = 'http://static.duoshuo.com/embed.js';
-								ds.charset = 'UTF-8';
-								(document.getElementsByTagName('head')[0] 
-								|| document.getElementsByTagName('body')[0]).appendChild(ds);
-							})();
-							</script>
-										<!-- Duoshuo Comment END -->
-									</c:when>
-									<c:otherwise>
-										<div id="respond" class="comment-respond">
-											<form action="${rurl}" method="post" id="commentform"
-												class="comment-form">
-												<input type="hidden" name="id" value="${log.logId}" /> <input
-													type="hidden" name="comment" value="add" />
-												<p class="comment-notes">
-													必填项已用<span class="required">*</span>标注
-												</p>
-												<p class="comment-form-author">
-													<label for="author">姓名 <span class="required">*</span>
-													</label> <input id="author" name="name" type="text" value=""
-														size="30" aria-required='true' />
-												</p>
-												<p class="comment-form-comment">
-													<label for="comment">评论</label>
-													<textarea id="comment" name="message" cols="45" rows="8"
-														aria-required="true"></textarea>
-
-												</p>
-												<input type='hidden' id='YXM_here' />
-												<script type='text/javascript' charset='gbk' id='YXM_script'
-													src='http://api.yinxiangma.com/api3/yzm.yinxiangma.php?pk=0bc4665eded8dfb776e37937a91785c0&v=YinXiangMaJAVASDK_4.0'>
-							</script>
-												<p class="form-submit">
-													<input type="submit" id="sub" value="发表评论" /> <input
-														type='hidden' name='comment_post_ID' value='22'
-														id='comment_post_ID' /> <input type='hidden'
-														name='comment_parent' id='comment_parent' value='0' />
-												</p>
-											</form>
-										</div>
-									</c:otherwise>
-								</c:choose>
-
-							</c:when>
-							<c:otherwise>
-							</c:otherwise>
-						</c:choose>
-					</div>
-				</div>
-			</div>
+  <div class="meta">
+  <p class="category"><a href="http://sheshui.me/category/note/" rel="tag">${log.typeName}</a> </p>
+  <p class="published"><time pubdate="pubdate" datetime="2014-08-24">/ 2014-08-24</time></p>
+  <p class="permalink">/ <a href="http://sheshui.me/blogs/guangzhou-biz-trip-0818" rel="bookmark">Permalink</a></p>
+  </div>
+  <div class="content">
+  	${log.content }
+  </div>
+  
+  <p style="color:#D4D4D4">最后更新：2014-10-12 15:06</p>
+  <p style="color:#D4D4D4">&mdash;&mdash; 原创内容，转载请注明：[ 文章转载自：涉水的博客 <a style="color:#D4D4D4" href="http://sheshui.me">http://sheshui.me</a> ] &mdash;&mdash;</p>
+        <div class="pager-nav">
+          <a title="随记：捣腾" href="http://sheshui.me/blogs/daoteng" rel="prev"><p class="prev">上一篇：随记：捣腾</p></a>
+          <a title="给贝贝的一封信" href="http://sheshui.me/blogs/to-beibei-a-letter" rel="next"><p class="next">下一篇：给贝贝的一封信</p></a>
+        </div>
+                          
+      </section>
 	</c:otherwise>
 </c:choose>
 <jsp:include page="plugs.jsp"></jsp:include>
+</div>		 
 <jsp:include page="footer.jsp"></jsp:include>

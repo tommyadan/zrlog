@@ -34,54 +34,55 @@
 	</c:when>
 	<c:otherwise>
 		<c:set var="pageLevel" value="2" scope="request"/>
-		     <div class="main clearfloat">
-      
-      
-      
-      <section>
-      <!--[if lt IE 9]>
-      <div class="tips not-ie" id="tipsWrap">
-        <span class="close" id="clostBtn" title="Close">关闭</span>
-        <div class="tips-content">
-          <span class="notice">为了您有更好的浏览体验，请升级使用以下浏览器：</span><span class="browsers"><a href="http://www.google.com/chrome" class="chrome" title="谷歌浏览器">Chrome</a><a href="http://www.mozilla.org/en-US/firefox/new/" class="ff" title="火狐">Firefox</a><a href="http://www.opera.com/download/" class="opera" title="Opera">Opera</a><a href="http://www.apple.com/safari/download/" class="safari" title="Safari">Safari</a></span>
-        </div>
-        <script>$('#clostBtn').click( function(){ $('#tipsWrap').css('display','none'); } ); </script>
-      </div>
-      <![endif]--> 
-        
-          
-            
-              
-                <!--<div class="slider-warp">
-<div id="slides" class="slides">
-  <img src="/files/slides/banner_slider_01.jpg" alt="" width="700" height="210" />
-  <img src="/files/slides/banner_slider_02.jpg" alt="" width="700" height="210" />
-  <img src="/files/slides/banner_slider_03.jpg" alt="" width="700" height="210"/>
-</div>
-</div>-->
-	<c:if test="${not empty requestScope.data}">
+		<div id="main">
+		<div id="primary">
+		<div id="content" role="main">
+			<c:if test="${not empty requestScope.data}">
 				<c:forEach var="log" items="${requestScope.data.rows}">
-                <article class="entry">
 
-  
- <h2 class="post-title"><a rel="bookmark" href="${rurl}post/${log.alias}">${log.title}</a></h2>
-
-
-  <div class="content">
-       
-    	<p>${log.digest}</p>
-  
-  </div>
-  <div class="meta">
-  <p class="category"><a rel="tag" href="${rurl}post/sort/${log.typeAlias}">${log.typeName}</a> </p>
-  <p class="published">/<time datetime="${log.releaseTime}">&nbsp;${log.releaseTime.year+1900}年${log.releaseTime.month+1}月${log.releaseTime.date}日</time></p>
-  <p class="commentlink"><a href="${rurl}post/${log.alias}#comment-list" class="comments_invite">查看评论 [${log.commentSize}]</a></p>
-  </div> 
-
-</article>   
-</c:forEach>
-</c:if>
-        <c:if test="${requestScope.data.page>1}">
+					<article
+						class="post-33 post type-post status-publish format-standard hentry category-seo"
+						id="post-33">
+						<header class="entry-header">
+							<h1 class="entry-title">
+								<a title="链向 ${log.title}" href="${rurl}post/${log.alias}"
+									target="_blank" rel="bookmark">${log.title}</a>
+							</H1>
+							<DIV class="entry-meta">
+								<SPAN class="sep">发表于 </SPAN><A
+									href="${rurl}post/${log.alias}" rel="bookmark"><time
+										class="entry-date" datetime="${log.releaseTime}">${log.releaseTime.year+1900}年${log.releaseTime.month+1}月${log.releaseTime.date}日</time>
+								</A><SPAN class="by-author"> <SPAN class="sep"> 由 </SPAN> <SPAN
+									class="author vcard"><A title="查看所有由发布的文章"
+										class="url fn n" href="${rurl }author/admin" rel="author"></A>
+								</SPAN>
+								</SPAN>
+							</DIV>
+							<div class="comments-link">
+								<a href="${rurl}post/${log.alias}#comments"
+									title="《 ${log.title}》上的评论"> ${log.commentSize}</a>
+							</div>
+						</HEADER>
+						<DIV class="entry-content">${log.digest}<br/></DIV>
+						<FOOTER class="entry-meta">
+							<SPAN class="cat-links"><SPAN
+								class="entry-utility-prep entry-utility-prep-cat-links">发表在</SPAN>
+								<A title="查看'${log.typeName}'中的全部文章" href="${rurl}post/sort/${log.typeAlias}"
+								rel="category tag">${log.typeName}</A> </SPAN> <SPAN class="sep">|
+							</SPAN> <SPAN class="comments-link"><A
+								title="《 ${log.title}》上的评论"
+								href="${rurl}post/${log.alias}#respond"><SPAN
+									class="leave-reply">发表回复</SPAN>
+							</A>
+							</SPAN>
+						</FOOTER>
+					</ARTICLE>
+				</c:forEach>
+			</c:if>
+			
+			<c:if test="${requestScope.data.total>1}">
+			<DIV class="page_navi">
+				<c:if test="${requestScope.data.page>1}">
 				<A title="跳转到第一页" class="extend" href="${rurl}${requestScope.yurl}1">第一页 </A>
 				<A href="${rurl}${requestScope.yurl}${requestScope.data.page-1}">上一页 </A>
 				</c:if>
@@ -117,11 +118,13 @@
 				<A title="跳转到最后一页" class="extend"
 					href="${rurl}${requestScope.yurl}${requestScope.data.total}">
 					最后一页 </A></c:if>
-                          
-      </section>
 
+			</DIV>
+			</c:if>
+		</DIV>
+		
+	</DIV>
 	</c:otherwise>
 </c:choose>
 <jsp:include page="plugs.jsp"></jsp:include>
-    </div>
 <jsp:include page="footer.jsp"></jsp:include>

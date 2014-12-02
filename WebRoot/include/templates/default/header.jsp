@@ -3,106 +3,101 @@
 <%
 	String turl = request.getRequestURI();
 	String kurl = request.getRequestURI();
-	String url = request.getScheme() + "://" + request.getHeader("host")+request.getContextPath()+"/include/templates/default";
+	String url = request.getScheme() + "://" + request.getHeader("host") +request.getContextPath()+((Map<String,Object>)(((Map<String,Object>)request.getAttribute("init")).get("webSite"))).get("template");
 	request.setAttribute("url", url);
 	request.setAttribute("rurl",request.getScheme() + "://" + request.getHeader("host")+ request.getContextPath()+"/");
+	String suffix="";
+	if(request.getContextPath()+((Map<String,Object>)(((Map<String,Object>)request.getAttribute("init")).get("webSite"))).get("pseudo_static")!=null){
+		suffix=".html";
+	}
+	request.setAttribute("suffix", suffix);
 %>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang='zh-CN' xml:lang='zh-CN' xmlns='http://www.w3.org/1999/xhtml'>
+<!DOCTYPE html>
+<html lang="zh" class="no-js">
 <head>
-<c:set var="webs" value="${init.webSite}" scope="request"></c:set>
-<meta charset="utf-8"/>
-<link rel="shortcut icon" type="image/x-icon" href="${rurl}/favicon.ico" />
-<meta name="description" content="${webs.description}"/>
-<c:choose>
-<c:when test="${empty requestScope.log or empty requestScope.log.keywords}">
-<meta name="keywords" content="${webs.keywords}"/>
-</c:when>
-<c:otherwise>
-<meta name="keywords" content="${requestScope.log.keywords}"/>
-</c:otherwise>
-</c:choose>
-<title><c:if test="${not empty requestScope.log.title}">${requestScope.log.title} - </c:if>${webs.title} - ${webs.second_title}</title>
-<link type="text/css" href="${url}/style.css" rel="stylesheet"  media="all"/>
-<link type="text/css" id="page-list-style-css" href="${url}/css/page-list.css" rel="stylesheet"  media="all"/>
-<link type="text/css" rel="stylesheet" href="${rurl }/include/plugs/SyntaxHighlighter/styles/shCoreDefault.css" />
-<script type="text/javascript" src="${url}/js/html5.js"></script> 
-<script type="text/javascript" src="${url}/js/jquery-1.4.2.min.js"></script>
-<script type="text/javascript" src="${rurl }/include/plugs/SyntaxHighlighter/scripts/shCore.js"></script>
-<script type="text/javascript" src="${rurl }/include/plugs/SyntaxHighlighter/scripts/shBrushCpp.js"></script>
-<script type="text/javascript" src="${rurl }/include/plugs/SyntaxHighlighter/scripts/shBrushCSharp.js"></script>
-<script type="text/javascript" src="${rurl }/include/plugs/SyntaxHighlighter/scripts/shBrushJava.js"></script>
-<script type="text/javascript" src="${rurl }/include/plugs/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
-<script type="text/javascript" src="${rurl }/include/plugs/SyntaxHighlighter/scripts/shBrushSql.js"></script>
-<script type="text/javascript" src="${rurl }/include/plugs/SyntaxHighlighter/scripts/shBrushXml.js"></script>
-<script type="text/javascript">SyntaxHighlighter.defaults['toolbar'] = false;SyntaxHighlighter.all();  </script>
-<STYLE type="text/css">
-	/* Link color */
-	a,
-	#site-title a:focus,
-	#site-title a:hover,
-	#site-title a:active,
-	.entry-title a:hover,
-	.entry-title a:focus,
-	.entry-title a:active,
-	.widget_twentyeleven_ephemera .comments-link a:hover,
-	section.recent-posts .other-recent-posts a[rel="bookmark"]:hover,
-	section.recent-posts .other-recent-posts .comments-link a:hover,
-	.format-image footer.entry-meta a:hover,
-	#site-generator a:hover {
-		color: #1e73be;
-	}
-	section.recent-posts .other-recent-posts .comments-link a:hover {
-		border-color: #1e73be;
-	}
-	article.feature-image.small .entry-summary p a:hover,
-	.entry-header .comments-link a:hover,
-	.entry-header .comments-link a:focus,
-	.entry-header .comments-link a:active,
-	.feature-slider a.active {
-		background-color: #1e73be;
-	}
-</STYLE>
-	 
- 
-<style id="custom-background-css" type="text/css">
-.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}
-body.custom-background { background-color: #5c8cbc; }
-</style>
+  <meta charset="utf-8" />
+  <c:set var="webs" value="${init.webSite}" scope="request"></c:set>
+    <title><c:if test="${not empty requestScope.log.title}">${requestScope.log.title} - </c:if>${webs.title} - ${webs.second_title}</title>
+	<meta charset="utf-8"/>
+	<link rel="shortcut icon" type="image/x-icon" href="${rurl}/favicon.ico" />
+	<meta name="description" content="${webs.description}"/>
+	<c:choose>
+	<c:when test="${empty requestScope.log or empty requestScope.log.keywords}">
+	<meta name="keywords" content="${webs.keywords}"/>
+	</c:when>
+	<c:otherwise>
+	<meta name="keywords" content="${requestScope.log.keywords}"/>
+	</c:otherwise>
+	</c:choose>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" media="screen" href="${url }/css/common.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="${url }/css/style_2014.css?v201409" />
+  <!-- Begin highlightjs -->
+  <link rel="stylesheet" href="${url }/js/highlight/styles/github.css">
+  <!-- // End highlightjs -->
+  <link rel="shortcut icon" href="http://sheshui.me/favicon.ico" />
+  <link rel="canonical" href="http://sheshui.me/">
+  
+  <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+  <script src="${url }/js/lib/jquery-1.10.2.min.js"></script>
+  <script>!window.jQuery && document.write('<script src="${url }/js/lib/jquery-1.10.2.min.js"><\/script>');</script>
+  <script src="${url }/js/lib/modernizr.custom.16617.js"></script>
+  <!--[if lt IE 9]><script src="${url }/js/html5shiv.js"></script> <script src="${url }/js/css3-mediaqueries.js"></script><link rel="stylesheet" type="text/css" media="screen" href="/css/style-ie7.css" /><![endif]-->
+
+
 
 </head>
-<body class="home blog custom-background single-author two-column right-sidebar">
-	<div class="hfeed" id="page">
-		<header id="branding" role="banner">
-		<hgroup>
-		<h1 id="site-title">
-			<span><a title="${webs.secondTitle}" href="${rurl }" rel="home">${webs.title}</a></span>
-		</h1>
-		<h2 id="site-description"></h2>
-		</hgroup>
-		<form id="searchform" action="${rurl }post/search" method="post">
-			<label class="assistive-text" for="s">搜索</label> <input name="key" class="field" id="s" type="text" placeholder="<c:out value="${sessionScope.key}" default="请输入关键字" />" value="<c:out value="${sessionscope.keywords}"/>"/> 
-			<input name="submit" class="submit" id="searchsubmit" type="submit" value="<c:out value="${sessionScope.key}" default="请输入关键字" />"/>
-		</form>
-		<nav id="access" role="navigation">
-		<div class="menu-%e4%b8%bb%e8%8f%9c%e5%8d%95-container">
-			<ul class="menu" id="menu-%e4%b8%bb%e8%8f%9c%e5%8d%95">
-				<c:set value="${rurl}/${requestScope.yurl}" var="nurl"></c:set>
+<body class="default front">
+  <div class="page">
+    <div class="top">
+  <div class="inner">
+    <header>
+      <h1 class="site-name"><a href="${rurl}"><%=request.getHeader("host") %></a><span class="slogan">${webs.title }</span></h1>
+      <nav class="mainnav">
+        <ul class="section_list">
+        	<c:set value="${rurl}/${requestScope.yurl}" var="nurl"></c:set>
 				<c:forEach var="lognav" items="${init.logNavs}">
 					<c:choose>
 						<c:when test="${lognav.url eq nurl}">
-				<li id="current" class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item"><a href="${lognav.url}"><c:out value="${lognav.navName}" />
-				</a><span></span>
-				</li>
+				<li class="active"><a href="${lognav.url}"><c:out value="${lognav.navName}" /></a><span></span></li>
 						</c:when>
 						<c:otherwise>
-				<li><a href="${lognav.url}"><c:out value="${lognav.navName}" />
-				</a><span></span>
-				</li>
+				<li><a href="${lognav.url}"><c:out value="${lognav.navName}" /></a><span></span></li>
 						</c:otherwise>
 					</c:choose>
 				</c:forEach>
-			</ul>
-		</div>
-		</nav> 
-	</header>
+        </ul>
+      </nav>
+      <ul id="gn-menu" class="gn-menu-main">
+        <li class="gn-trigger">
+          <a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+          <nav class="gn-menu-wrapper">
+            <div class="gn-scroller">
+              <ul class="gn-menu">
+                <li class="gn-search-item">
+                  <form method="get" action="http://sheshui.me/" id="searchform1"><input placeholder="搜索博客" type="search" name="q" class="gn-search">
+                  <a class="gn-icon icon-search"><span>搜索</span></a></form>
+                </li>
+                
+ 				<li>
+                  <a class="gn-icon icon-article" href="/blogs/">分类</a>
+                  <ul class="gn-submenu">
+				<c:forEach var="type" items="${init.types}">
+					<li><a class="gn-icon icon-tag" href="${rurl}post/sort/${type.alias}">${type.typeName} (${type.typeamount})</a></li>
+				</c:forEach>
+                  </ul>
+                </li>
+              </ul>
+            </div><!-- /gn-scroller -->
+          </nav>
+        </li>
+        <li class="sitename"><a class="gn-icon icon-info" href="/"><span><%=request.getHeader("host") %></span></a></li>
+      </ul>
+    <script src="http://sheshui.me/js/classie.js"></script>
+    <script src="http://sheshui.me/js/gnmenu.js"></script>
+    <script>
+      new gnMenu(document.getElementById( 'gn-menu' ));
+    </script>
+    </header>
+  </div>
+</div>
