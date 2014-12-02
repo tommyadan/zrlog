@@ -1,9 +1,9 @@
-﻿<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+﻿﻿<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 	<ASIDE>
 		<div class="widget search">
- 			 <form id="searchform" action="/" method="get">
-			<p class="search_input"><input type="text" onblur="OnExit(this)" onfocus="OnEnter(this)" size="15" name="q" title="输入关键字，Enter 键搜索" value="搜索关键字..." class="inputtext"><input type="submit" class="btn" value="搜索"></p>
+ 			 <form id="searchform" action="${rurl }post/search" method="post">
+			<p class="search_input"><input type="text" onblur="OnExit(this)" onfocus="OnEnter(this)" size="15" name="k" title="输入关键字，Enter 键搜索" value="搜索关键字..." class="inputtext"><input type="submit" class="btn" value="搜索"></p>
 				</form>  
   		</div>
 		<c:choose>

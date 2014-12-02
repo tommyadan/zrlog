@@ -18,7 +18,6 @@
   <meta charset="utf-8" />
   <c:set var="webs" value="${init.webSite}" scope="request"></c:set>
     <title><c:if test="${not empty requestScope.log.title}">${requestScope.log.title} - </c:if>${webs.title} - ${webs.second_title}</title>
-	<meta charset="utf-8"/>
 	<link rel="shortcut icon" type="image/x-icon" href="${rurl}/favicon.ico" />
 	<meta name="description" content="${webs.description}"/>
 	<c:choose>
@@ -32,18 +31,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" type="text/css" media="screen" href="${url }/css/common.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="${url}/css/style_2014.css?v201409" />
+  
+  <link type="text/css" rel="stylesheet" href="${rurl }/include/plugs/SyntaxHighlighter/styles/shCoreDefault.css" />
+  
   <!-- Begin highlightjs -->
   <link rel="stylesheet" href="${url }/js/highlight/styles/github.css">
   <!-- // End highlightjs -->
-  <link rel="shortcut icon" href="http://sheshui.me/favicon.ico" />
-  <link rel="canonical" href="http://sheshui.me/">
+  <link rel="shortcut icon" href="${rurl }/favicon.ico" />
   
-  <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
   <script src="${url }/js/lib/jquery-1.10.2.min.js"></script>
   <script>!window.jQuery && document.write('<script src="${url }/js/lib/jquery-1.10.2.min.js"><\/script>');</script>
   <script src="${url }/js/lib/modernizr.custom.16617.js"></script>
   <!--[if lt IE 9]><script src="${url }/js/html5shiv.js"></script> <script src="${url }/js/css3-mediaqueries.js"></script><link rel="stylesheet" type="text/css" media="screen" href="/css/style-ie7.css" /><![endif]-->
-
+	<script type="text/javascript" src="${rurl }/include/plugs/SyntaxHighlighter/scripts/shCore.js"></script>
+	<script type="text/javascript" src="${rurl }/include/plugs/SyntaxHighlighter/scripts/shBrushCpp.js"></script>
+	<script type="text/javascript" src="${rurl }/include/plugs/SyntaxHighlighter/scripts/shBrushCSharp.js"></script>
+	<script type="text/javascript" src="${rurl }/include/plugs/SyntaxHighlighter/scripts/shBrushJava.js"></script>
+	<script type="text/javascript" src="${rurl }/include/plugs/SyntaxHighlighter/scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="${rurl }/include/plugs/SyntaxHighlighter/scripts/shBrushSql.js"></script>
+	<script type="text/javascript" src="${rurl }/include/plugs/SyntaxHighlighter/scripts/shBrushXml.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.defaults['toolbar'] = false;SyntaxHighlighter.all();  </script>
 
 
 </head>
@@ -93,8 +100,8 @@
         </li>
         <li class="sitename"><a class="gn-icon icon-info" href="/"><span><%=request.getHeader("host") %></span></a></li>
       </ul>
-    <script src="http://sheshui.me/js/classie.js"></script>
-    <script src="http://sheshui.me/js/gnmenu.js"></script>
+    <script src="${url }/js/classie.js"></script>
+    <script src="${url }/js/gnmenu.js"></script>
     <script>
       new gnMenu(document.getElementById( 'gn-menu' ));
     </script>

@@ -331,6 +331,11 @@ ul.comments_error li{padding: 2px 0 2px 12px; margin-bottom: 0; border: 0 none; 
 	.timeline-view .item:nth-child(even) .summary:after {border-right-color:transparent;border-bottom-color:#F2F2F2;	}
 	.timeline-view .item .clogo {width:48px; height:48px;	position: relative;float: right;left: auto;margin: -75px 5px 0 0px;}	
 }
+/* =Structure
+----------------------------------------------- */
+.page_navi{overflow:hidden;width:100%;text-align:center}
+.page_navi a{height:36px;border:1px solid #DDD;-webkit-border-radius:12px;-moz-border-radius:12px;border-radius:12px;color:#888;text-decoration:none;line-height:36px;margin:2px;padding:3px 8px}
+.page_navi a:hover,.page_navi a.current{border:1px solid #1e90ff;color:#4682b4;font-weight:bolder}
 
 /* Timeline */
 .timeline .main section{width:100%;float: none;}

@@ -81,6 +81,8 @@
 </article>   
 </c:forEach>
 </c:if>
+<c:if test="${requestScope.data.total>1}">
+	<div class="page_navi">
         <c:if test="${requestScope.data.page>1}">
 				<A title="跳转到第一页" class="extend" href="${rurl}${requestScope.yurl}1">第一页 </A>
 				<A href="${rurl}${requestScope.yurl}${requestScope.data.page-1}">上一页 </A>
@@ -117,7 +119,8 @@
 				<A title="跳转到最后一页" class="extend"
 					href="${rurl}${requestScope.yurl}${requestScope.data.total}">
 					最后一页 </A></c:if>
-                          
+                          </div>
+                          </c:if>
       </section>
 
 	</c:otherwise>

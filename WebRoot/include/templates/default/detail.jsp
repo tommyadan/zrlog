@@ -45,33 +45,55 @@
       </div>
       <![endif]--> 
         
-          <article>
-
-  
-
-
-  <h1 class="post-title">${log.title}</h1>
+        <div style="background:rgba(255,255,255,1);">
+        <article>
+   <h1 class="post-title">${log.title}</h1>
 
 
   <div class="meta">
   <p class="category"><a href="http://sheshui.me/category/note/" rel="tag">${log.typeName}</a> </p>
-  <p class="published"><time pubdate="pubdate" datetime="2014-08-24">/ 2014-08-24</time></p>
-  <p class="permalink">/ <a href="http://sheshui.me/blogs/guangzhou-biz-trip-0818" rel="bookmark">Permalink</a></p>
+  <p class="published">/<time datetime="${log.releaseTime}">&nbsp;${log.releaseTime.year+1900}年${log.releaseTime.month+1}月${log.releaseTime.date}日</time></p>
   </div>
   <div class="content">
-  	${log.content }
+  	<p>${log.content }</p>
   </div>
   
-  <p style="color:#D4D4D4">最后更新：2014-10-12 15:06</p>
-  <p style="color:#D4D4D4">&mdash;&mdash; 原创内容，转载请注明：[ 文章转载自：涉水的博客 <a style="color:#D4D4D4" href="http://sheshui.me">http://sheshui.me</a> ] &mdash;&mdash;</p>
+  <p style="color:#D4D4D4"> 转载请注明作者和出处(${webs.title})，并添加本页链接。<BR>原文链接:
+							<A title="${log.title }" href="${rurl}post/${log.alias}"><SPAN style="color: rgb(51, 102, 255);" span="">${rurl}post/${log.alias}</SPAN></A></p>
         <div class="pager-nav">
-          <a title="随记：捣腾" href="http://sheshui.me/blogs/daoteng" rel="prev"><p class="prev">上一篇：随记：捣腾</p></a>
-          <a title="给贝贝的一封信" href="http://sheshui.me/blogs/to-beibei-a-letter" rel="next"><p class="next">下一篇：给贝贝的一封信</p></a>
+          <a title="${log.lastLog.title}" href="${rurl }post/${log.lastLog.alias}" rel="prev"><p class="prev">上一篇：${log.lastLog.title}</p></a>
+          <a title="${log.nextLog.title}" href="${rurl }post/${log.nextLog.alias}" rel="next"><p class="next">下一篇：${log.nextLog.title}</p></a>
         </div>
-                          
+							</article> 
+							 <c:choose>
+							<c:when test="${log.canComment}">
+								<c:choose>
+									<c:when test="${init.webSite.user_comment_pluginStatus==1}">
+										<!-- Duoshuo Comment BEGIN -->
+										<div style="padding:20px;margin-bottom: 20px" class="ds-thread" data-thread-key="${log.logId}"
+											data-title="${log.tilte }"
+											data-url="${rurl}post/${log.alias}"></div>
+										<script type="text/javascript">
+						var duoshuoQuery = {short_name:"xchun"};
+							(function() {
+								var ds = document.createElement('script');
+								ds.type = 'text/javascript';ds.async = true;
+								ds.src = 'http://static.duoshuo.com/embed.js';
+								ds.charset = 'UTF-8';
+								(document.getElementsByTagName('head')[0] 
+								|| document.getElementsByTagName('body')[0]).appendChild(ds);
+							})();
+							</script>
+								<!-- Duoshuo Comment END -->
+									</c:when>
+									<c:otherwise>
+									</c:otherwise>
+								</c:choose>
+								</c:when>  
+							</c:choose>      
+        </div>
       </section>
 	</c:otherwise>
 </c:choose>
 <jsp:include page="plugs.jsp"></jsp:include>
-</div>		 
 <jsp:include page="footer.jsp"></jsp:include>
