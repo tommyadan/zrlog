@@ -3,9 +3,14 @@
 <%
 	String turl = request.getRequestURI();
 	String kurl = request.getRequestURI();
-	String url = request.getScheme() + "://" + request.getHeader("host")+request.getContextPath()+"/include/templates/default";
+	String url = request.getScheme() + "://" + request.getHeader("host") +request.getContextPath()+((Map<String,Object>)(((Map<String,Object>)request.getAttribute("init")).get("webSite"))).get("template");
 	request.setAttribute("url", url);
 	request.setAttribute("rurl",request.getScheme() + "://" + request.getHeader("host")+ request.getContextPath()+"/");
+	String suffix="";
+	if(request.getContextPath()+((Map<String,Object>)(((Map<String,Object>)request.getAttribute("init")).get("webSite"))).get("pseudo_static")!=null){
+		suffix=".html";
+	}
+	request.setAttribute("suffix", suffix);
 %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html lang='zh-CN' xml:lang='zh-CN' xmlns='http://www.w3.org/1999/xhtml'>
@@ -87,10 +92,9 @@ body.custom-background { background-color: #5c8cbc; }
 		<nav id="access" role="navigation">
 		<div class="menu-%e4%b8%bb%e8%8f%9c%e5%8d%95-container">
 			<ul class="menu" id="menu-%e4%b8%bb%e8%8f%9c%e5%8d%95">
-				<c:set value="${rurl}/${requestScope.yurl}" var="nurl"></c:set>
 				<c:forEach var="lognav" items="${init.logNavs}">
 					<c:choose>
-						<c:when test="${lognav.url eq nurl}">
+						<c:when test="${lognav.url eq requrl}">
 				<li id="current" class="menu-item menu-item-type-taxonomy menu-item-object-category current-menu-item"><a href="${lognav.url}"><c:out value="${lognav.navName}" />
 				</a><span></span>
 				</li>

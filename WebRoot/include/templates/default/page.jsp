@@ -1,44 +1,22 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <jsp:include page="header.jsp"></jsp:include>
+ <div class="main clearfloat">
 <c:choose>
 	<c:when test="${empty requestScope.data}">
 		<c:set var="pageLevel" value="1" scope="request"/>
-		<div id="main">
-		<section id="primary">
-			<div id="content" role="main">
-				<article id="post-0" class="post no-results not-found">
-					<header class="entry-header">
-						<h1 class="entry-title">未找到</h1>
-					</header>
-					<!-- .entry-header -->
-	
-					<div class="entry-content">
-						<p>抱歉，没有符合您搜索条件的结果。请换其它关键词再试。</p>
-						<form method="post" id="searchform" action="${rurl }post/search">
-							<label for="s" class="assistive-text">搜索</label> <input
-								type="text" class="field" name="key" id="s" placeholder="搜索" />
-							<input type="submit" class="submit" name="submit"
-								id="searchsubmit" value="搜索" />
-						</form>
-					</div>
-					<!-- .entry-content -->
-				</article>
-				<!-- #post-0 -->
-	
-	
-			</div>
-			<!-- #content -->
+      <section>
+		  <c:if test="${not empty tipsType}"></c:if>
+			<h2 class="category-title">
+				${tipsType}目录：${tipsName}<br/>
+				以下是与${tipsType} “${tipsName}” 相关联的文章
+			</h2>
 		</section>
-		<!-- #primary -->
 	</c:when>
 	<c:otherwise>
+	 <section>
 		<c:set var="pageLevel" value="2" scope="request"/>
-		     <div class="main clearfloat">
-      
-      
-      
-      <section>
+		    
       <!--[if lt IE 9]>
       <div class="tips not-ie" id="tipsWrap">
         <span class="close" id="clostBtn" title="Close">关闭</span>
@@ -48,17 +26,12 @@
         <script>$('#clostBtn').click( function(){ $('#tipsWrap').css('display','none'); } ); </script>
       </div>
       <![endif]--> 
-        
-          
-            
-              
-                <!--<div class="slider-warp">
-<div id="slides" class="slides">
-  <img src="/files/slides/banner_slider_01.jpg" alt="" width="700" height="210" />
-  <img src="/files/slides/banner_slider_02.jpg" alt="" width="700" height="210" />
-  <img src="/files/slides/banner_slider_03.jpg" alt="" width="700" height="210"/>
-</div>
-</div>-->
+    <c:if test="${not empty tipsType}">
+	<h2 class="category-title">
+		${tipsType}目录：${tipsName}<br/>
+		以下是与${tipsType} “${tipsName}” 相关联的文章
+	</h2>
+	</c:if>
 	<c:if test="${not empty requestScope.data}">
 				<c:forEach var="log" items="${requestScope.data.rows}">
                 <article class="entry">
@@ -126,5 +99,4 @@
 	</c:otherwise>
 </c:choose>
 <jsp:include page="plugs.jsp"></jsp:include>
-    </div>
 <jsp:include page="footer.jsp"></jsp:include>

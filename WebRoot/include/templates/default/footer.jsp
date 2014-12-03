@@ -5,23 +5,9 @@
     <div class="bottom">
       <div class="inner">
         <footer>
-          <!--<div class="footer-left">
-           <nav><a href="/about/">关于<span class="en">About</span></a> <a href="/about/works/">案例<span class="en">Works</span></a> <a href="/about/services">服务<span class="en">Services</span></a></nav>
-            <div class="box first">
-              <h2>About</h2>
-              <div class="article-list"><ul>
-<li><a rel="bookmark" href="http://sheshui.me/about/release">Release</a></li>
-<li><a rel="bookmark" href="http://sheshui.me/about/services">Services</a></li>
-<li><a rel="bookmark" href="http://sheshui.me/about/works">Works</a></li>
-<li><a rel="bookmark" href="http://sheshui.me/about/links">Links</a></li>
-<li><a rel="bookmark" href="http://sheshui.me/about/read">Read</a></li></ul></div>
-            </div>
-            <div class="clearfix"></div>
-          </div>-->
           <div class="footer-right">
-            <p><cite>&copy; 2014 Sheshui.me</cite></p>
-            <p>Powered by <a href="http://textpattern.com" target="_blank">Textpattern</a>, <span title="涉水轻舟">Themed by <a href="/about/" target="_blank">Robin L.</a> &nbsp; </span></p>
-            <p><a href="http://sheshui.me/rss/" title="RSS Feed">RSS</a> / <a href="http://sheshui.me/atom/" title="Atom Feed">Atom</a></p>
+            <p><cite>&copy; 2014 ${webs.title}</cite></p>
+            <p>Powered by <a href="http://zrlog.com" target="_blank">zrlog</a>, <span title="涉水轻舟">Themed by <a href="http://sheshui.me/wiki/HomePage" target="_blank">Robin L.</a> &nbsp; </span></p>
           </div>
           <div class="clearfix"></div>
         </footer>
@@ -44,6 +30,7 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script>
+<div style="display:none">${webs.webCm}</div>
 </body>
 </html>
 

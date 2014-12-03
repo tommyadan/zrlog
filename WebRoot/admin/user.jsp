@@ -8,8 +8,8 @@
 KindEditor.ready(function(K) {
 	var uploadbutton = K.uploadbutton({
 		button : K('#uploadButton')[0],
-		fieldName : 'file',
-		url : '${url}/image/fileUpload',
+		fieldName : 'imgFile',
+		url : '${url}/admin/log/upload?dir=header',
 		afterUpload : function(data) {
 			if (data.error === 0) {
 				var url = K.formatUrl(data.url, 'absolute');
@@ -26,7 +26,7 @@ KindEditor.ready(function(K) {
 						name : '确定',
 						click : function(e) {
 							dialog.remove();
-							K('#url').val(url);
+							K('#logo').val(url);
 						}
 					},
 					noBtn : {
@@ -101,26 +101,6 @@ KindEditor.ready(function(K) {
 										<div class="col-sm-9">
 											<input type="text" name="second_title" value="${webs.second_title }" class="col-xs-10 col-sm-5" placeholder="请求输入网站副标题 " id="form-field-1">
 											
-										</div>
-									</div>
-									<div class="form-group">
-										<label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 网站关键词 </label>
-
-										<div class="col-sm-9">
-											<input type="text" name="keywords" value="${webs.keywords}" class="col-xs-10 col-sm-5" placeholder="请求输入网站关键词 " id="form-field-1">
-										</div>
-									</div>
-									
-									<div class="space-4"></div>
-
-									<div class="form-group">
-										<label for="form-field-2" class="col-sm-3 control-label no-padding-right"> 网站描述 </label>
-
-										<div class="col-sm-9">
-											<input type="text" name="description" value="${webs.description}"  class="col-xs-10 col-sm-5" placeholder="存放目录" id="form-field-2">
-											<span class="help-inline col-xs-12 col-sm-7">
-												<span class="middle"></span>
-											</span>
 										</div>
 									</div>
 									<div class="form-group">

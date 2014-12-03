@@ -4,7 +4,6 @@
 <c:choose>
 	<c:when test="${empty requestScope.data}">
 		<c:set var="pageLevel" value="1" scope="request"/>
-		<div id="main">
 		<section id="primary">
 			<div id="content" role="main">
 				<article id="post-0" class="post no-results not-found">
@@ -34,8 +33,7 @@
 	</c:when>
 	<c:otherwise>
 		<c:set var="pageLevel" value="2" scope="request"/>
-		     <div class="main clearfloat">
-      
+     <div class="main clearfloat">
       
       
       <section>
@@ -48,25 +46,12 @@
         <script>$('#clostBtn').click( function(){ $('#tipsWrap').css('display','none'); } ); </script>
       </div>
       <![endif]--> 
-        
-          
-            
-              
-                <!--<div class="slider-warp">
-<div id="slides" class="slides">
-  <img src="/files/slides/banner_slider_01.jpg" alt="" width="700" height="210" />
-  <img src="/files/slides/banner_slider_02.jpg" alt="" width="700" height="210" />
-  <img src="/files/slides/banner_slider_03.jpg" alt="" width="700" height="210"/>
-</div>
-</div>-->
 	<c:if test="${not empty requestScope.data}">
-				<c:forEach var="log" items="${requestScope.data.rows}">
-                <article class="entry">
+			<c:forEach var="log" items="${requestScope.data.rows}">
+               <article class="entry">
 
   
  <h2 class="post-title"><a rel="bookmark" href="${rurl}post/${log.alias}">${log.title}</a></h2>
-
-
   <div class="content">
        
     	<p>${log.digest}</p>
@@ -77,8 +62,7 @@
   <p class="published">/<time datetime="${log.releaseTime}">&nbsp;${log.releaseTime.year+1900}年${log.releaseTime.month+1}月${log.releaseTime.date}日</time></p>
   <p class="commentlink"><a href="${rurl}post/${log.alias}#comment-list" class="comments_invite">查看评论 [${log.commentSize}]</a></p>
   </div> 
-
-</article>   
+</article>     
 </c:forEach>
 </c:if>
 <c:if test="${requestScope.data.total>1}">
@@ -126,5 +110,4 @@
 	</c:otherwise>
 </c:choose>
 <jsp:include page="plugs.jsp"></jsp:include>
-    </div>
 <jsp:include page="footer.jsp"></jsp:include>

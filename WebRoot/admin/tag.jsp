@@ -50,7 +50,7 @@
 					
 				url:'<%=request.getAttribute("url")%>/admin/tag/queryAll',
 				datatype: "json",
-					colNames:['ID','url','navName'],
+					colNames:['ID','text','count'],
 					colModel:[
 						 
 						{name:'id',index:'id', width:60, sorttype:"int", editable: false},

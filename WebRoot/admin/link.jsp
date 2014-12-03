@@ -50,34 +50,36 @@
 					
 				url:'<%=request.getAttribute("url")%>/admin/link/queryAll',
 				datatype: "json",
-					colNames:[' ', 'ID','url','navName', 'sort'],
+					colNames:[' ', 'ID','url','linkName','alt', 'sort'],
 					colModel:[
 						{name:'myac',index:'', width:80, fixed:true, sortable:false, resize:false,
 							formatter:'actions', 
 							formatoptions:{ 
 								keys:true,
-								
-								delOptions:{recreateForm: true, beforeShowForm:beforeDeleteCallback},
+								delbutton: true,
+						        delOptions: {recreateForm: true, beforeShowForm:beforeDeleteCallback, url: '<%=request.getAttribute("url")%>/admin/link/delete' }
+								//delOptions:{recreateForm: true, beforeShowForm:beforeDeleteCallback},
 								//editformbutton:true, editOptions:{recreateForm: true, beforeShowForm:beforeEditCallback}
 							}
 						},
 						{name:'id',index:'id', width:60, sorttype:"int", editable: false},
 						{name:'url',index:'url',width:150, sortable:false,editable: true,edittype:"textarea", editoptions:{rows:"2",cols:"20"}},
 						{name:'linkName',index:'linkName', width:150,editable: true,editoptions:{size:"20",maxlength:"30"}},
+						{name:'alt',index:'alt', width:150,editable: true,editoptions:{size:"20",maxlength:"30"}},
 						{name:'sort',index:'sort', width:70, editable: true},
 			
 					], 
 			
-					viewrecords : true,
+					viewrecords : false,
 					rowNum:10,
 					rowList:[10,20,30],
 					pager : pager_selector,
 					altRows: true,
 					//toppager: true,
 					
-					multiselect: true,
+					multiselect: false,
 					//multikey: "ctrlKey",
-			        multiboxonly: true,
+			        multiboxonly: false,
 			
 					loadComplete : function() {
 						var table = this;
@@ -122,17 +124,17 @@
 				//navButtons
 				jQuery(grid_selector).jqGrid('navGrid',pager_selector,
 					{ 	//navbar options
-						edit: true,
+						edit: false,
 						editicon : 'icon-pencil blue',
 						add: true,
 						addicon : 'icon-plus-sign purple',
-						del: true,
+						del: false,
 						delicon : 'icon-trash red',
-						search: true,
+						search: false,
 						searchicon : 'icon-search orange',
 						refresh: true,
 						refreshicon : 'icon-refresh green',
-						view: true,
+						view: false,
 						viewicon : 'icon-zoom-in grey',
 					},
 					{

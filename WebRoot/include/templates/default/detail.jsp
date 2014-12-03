@@ -51,7 +51,7 @@
 
 
   <div class="meta">
-  <p class="category"><a href="http://sheshui.me/category/note/" rel="tag">${log.typeName}</a> </p>
+  <p class="category"><a href="${rurl}post/sort/${log.typeAlias}" rel="tag">${log.typeName}</a> </p>
   <p class="published">/<time datetime="${log.releaseTime}">&nbsp;${log.releaseTime.year+1900}年${log.releaseTime.month+1}月${log.releaseTime.date}日</time></p>
   </div>
   <div class="content">

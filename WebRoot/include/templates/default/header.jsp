@@ -42,7 +42,7 @@
   <script src="${url }/js/lib/jquery-1.10.2.min.js"></script>
   <script>!window.jQuery && document.write('<script src="${url }/js/lib/jquery-1.10.2.min.js"><\/script>');</script>
   <script src="${url }/js/lib/modernizr.custom.16617.js"></script>
-  <!--[if lt IE 9]><script src="${url }/js/html5shiv.js"></script> <script src="${url }/js/css3-mediaqueries.js"></script><link rel="stylesheet" type="text/css" media="screen" href="/css/style-ie7.css" /><![endif]-->
+  <!--[if lt IE 9]><script src="${url }/js/html5shiv.js"></script> <script src="${url }/js/css3-mediaqueries.js"></script><link rel="stylesheet" type="text/css" media="screen" href="${url}/css/style-ie7.css" /><![endif]-->
 	<script type="text/javascript" src="${rurl }/include/plugs/SyntaxHighlighter/scripts/shCore.js"></script>
 	<script type="text/javascript" src="${rurl }/include/plugs/SyntaxHighlighter/scripts/shBrushCpp.js"></script>
 	<script type="text/javascript" src="${rurl }/include/plugs/SyntaxHighlighter/scripts/shBrushCSharp.js"></script>
@@ -62,14 +62,13 @@
       <h1 class="site-name"><a href="${rurl}"><%=request.getHeader("host") %></a><span class="slogan">${webs.title }</span></h1>
       <nav class="mainnav">
         <ul class="section_list">
-        	<c:set value="${rurl}/${requestScope.yurl}" var="nurl"></c:set>
 				<c:forEach var="lognav" items="${init.logNavs}">
 					<c:choose>
-						<c:when test="${lognav.url eq nurl}">
-				<li class="active"><a href="${lognav.url}"><c:out value="${lognav.navName}" /></a><span></span></li>
+						<c:when test="${lognav.url eq requrl}">
+				<li class="active"><a href="${lognav.url}"><c:out value="${lognav.navName}" /></a></li>
 						</c:when>
 						<c:otherwise>
-				<li><a href="${lognav.url}"><c:out value="${lognav.navName}" /></a><span></span></li>
+				<li><a href="${lognav.url}"><c:out value="${lognav.navName}" /></a></li>
 						</c:otherwise>
 					</c:choose>
 				</c:forEach>
@@ -82,12 +81,12 @@
             <div class="gn-scroller">
               <ul class="gn-menu">
                 <li class="gn-search-item">
-                  <form method="get" action="http://sheshui.me/" id="searchform1"><input placeholder="搜索博客" type="search" name="q" class="gn-search">
+                  <form method="post" action="${rurl}/post/search" id="searchform1"><input placeholder="搜索博客" type="search" name="key" class="gn-search">
                   <a class="gn-icon icon-search"><span>搜索</span></a></form>
                 </li>
                 
  				<li>
-                  <a class="gn-icon icon-article" href="/blogs/">分类</a>
+                  <a class="gn-icon icon-article">分类</a>
                   <ul class="gn-submenu">
 				<c:forEach var="type" items="${init.types}">
 					<li><a class="gn-icon icon-tag" href="${rurl}post/sort/${type.alias}">${type.typeName} (${type.typeamount})</a></li>

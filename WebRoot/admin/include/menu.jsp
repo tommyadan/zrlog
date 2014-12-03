@@ -50,7 +50,7 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 						
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="${user.header}" alt="${user.userName}" />
 								<span class="user-info">
 									<small>欢迎光临,</small>
 									${user.userName}
@@ -161,7 +161,7 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 						</li>
 
 
-						<li <c:if test="${'type.jsp'==suburl or 'tag	.jsp'==suburl }">class="active open"</c:if>>
+						<li <c:if test="${'type.jsp'==suburl or 'tag.jsp'==suburl }">class="active open"</c:if>>
 							<a href="#" class="dropdown-toggle">
 								<i class="icon-list"></i>
 								其他

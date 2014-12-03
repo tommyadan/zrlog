@@ -63,9 +63,9 @@
 					
 				url:'<%=request.getAttribute("url")%>/admin/log/list',
 				datatype: "json",
-					colNames:['logId','Title','Keywords', 'Name', 'type','releaseTime','edit','delete'],
+					colNames:['id','Title','Keywords', 'Name', 'type','releaseTime','edit','delete'],
 					colModel:[
-						{name:'logId',index:'logId', width:40, sorttype:"int", editable: true},
+						{name:'id',index:'id', width:40, sorttype:"int", editable: true},
 						{name:'title',index:'title',width:220, sortable:false,editable: true,edittype:"textarea", editoptions:{rows:"2",cols:"20"}},
 						{name:'keywords',index:'keywords', width:160,editable: true,editoptions:{size:"20",maxlength:"30"}},
 						{name:'userName',index:'userName', width:60, editable: false},
@@ -78,7 +78,7 @@
 						       keys: true,
 						       editbutton:false,	
 						       delbutton: true,
-						       delOptions: {recreateForm: true, beforeShowForm:beforeDeleteCallback, url: '<%=request.getAttribute("url")%>/article/delete' }
+						       delOptions: {recreateForm: true, beforeShowForm:beforeDeleteCallback, url: '<%=request.getAttribute("url")%>/admin/log/delete' }
 						      }
 						},
 
