@@ -71,7 +71,7 @@
 									<c:when test="${init.webSite.user_comment_pluginStatus==1}">
 										<!-- Duoshuo Comment BEGIN -->
 										<div style="padding:20px;margin-bottom: 20px" class="ds-thread" data-thread-key="${log.logId}"
-											data-title="${log.tilte }"
+											data-title="${log.title}"
 											data-url="${rurl}post/${log.alias}"></div>
 										<script type="text/javascript">
 						var duoshuoQuery = {short_name:"xchun"};
