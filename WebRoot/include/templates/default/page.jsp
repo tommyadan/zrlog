@@ -48,7 +48,7 @@
   <div class="meta">
   <p class="category"><a rel="tag" href="${rurl}post/sort/${log.typeAlias}">${log.typeName}</a> </p>
   <p class="published">/<time datetime="${log.releaseTime}">&nbsp;${log.releaseTime.year+1900}年${log.releaseTime.month+1}月${log.releaseTime.date}日</time></p>
-  <p class="commentlink"><a href="${rurl}post/${log.alias}#comment-list" class="comments_invite">查看评论 [${log.commentSize}]</a></p>
+  <p class="commentlink"><a href="${rurl}post/${log.alias}#comment" class="comments_invite">查看评论 [${log.commentSize}]</a></p>
   </div> 
 
 </article>   

@@ -1,41 +1,20 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <jsp:include page="header.jsp"></jsp:include>
+ <div class="main clearfloat">
 <c:choose>
 	<c:when test="${empty requestScope.data}">
 		<c:set var="pageLevel" value="1" scope="request"/>
-		<section id="primary">
-			<div id="content" role="main">
-				<article id="post-0" class="post no-results not-found">
-					<header class="entry-header">
-						<h1 class="entry-title">未找到</h1>
-					</header>
-					<!-- .entry-header -->
-	
-					<div class="entry-content">
-						<p>抱歉，没有符合您搜索条件的结果。请换其它关键词再试。</p>
-						<form method="post" id="searchform" action="${rurl }post/search">
-							<label for="s" class="assistive-text">搜索</label> <input
-								type="text" class="field" name="key" id="s" placeholder="搜索" />
-							<input type="submit" class="submit" name="submit"
-								id="searchsubmit" value="搜索" />
-						</form>
-					</div>
-					<!-- .entry-content -->
-				</article>
-				<!-- #post-0 -->
-	
-	
-			</div>
-			<!-- #content -->
+      <section>
+		  <c:if test="${not empty tipsType}"></c:if>
+			<h2 class="category-title">
+				${tipsType}目录：${tipsName}<br/>
+				以下是与${tipsType} “${tipsName}” 相关联的文章
+			</h2>
 		</section>
-		<!-- #primary -->
 	</c:when>
 	<c:otherwise>
 		<c:set var="pageLevel" value="2" scope="request"/>
-     <div class="main clearfloat">
-      
-      
       <section>
       <!--[if lt IE 9]>
       <div class="tips not-ie" id="tipsWrap">
@@ -60,7 +39,7 @@
   <div class="meta">
   <p class="category"><a rel="tag" href="${rurl}post/sort/${log.typeAlias}">${log.typeName}</a> </p>
   <p class="published">/<time datetime="${log.releaseTime}">&nbsp;${log.releaseTime.year+1900}年${log.releaseTime.month+1}月${log.releaseTime.date}日</time></p>
-  <p class="commentlink"><a href="${rurl}post/${log.alias}#comment-list" class="comments_invite">查看评论 [${log.commentSize}]</a></p>
+  <p class="commentlink"><a href="${rurl}post/${log.alias}#comment" class="comments_invite">查看评论 [${log.commentSize}]</a></p>
   </div> 
 </article>     
 </c:forEach>

@@ -60,27 +60,6 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 		});
 	});
 </script>
-
-<script type="text/javascript">
-
-	function checkSubmit() {
-		if(document.getElementById("title").value=="" || document.getElementById("content").value=="")
-		{
-			document.getElementById("msg").innerHTML="文章的标题和内容都不能为空。。。。。";
-			return;
-		}
-		document.getElementById("type").value = "add";
-		document.getElementById("addorPre").submit();
-	}
-	function preview() {
-		document.getElementById("type").value = "preview";
-		document.getElementById("addorPre").submit();
-	}
-	function update() {
-		document.getElementById("type").value = "update";
-		document.getElementById("addorPre").submit();
-	}
-</script>
 <script type="text/javascript">
 	
 	$(function(){
@@ -103,8 +82,8 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 		});
 		$("#update").click(function(){
 			$.post('${url}/admin/log/update',$('#addorPre').serialize(),function(data){
-				if(data.add){
 					alert("发表成功");
+				if(data){
 				}
 			});
 		});
@@ -164,13 +143,13 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 					<textarea name="digest" cols="100" rows="8"  id="digest" style="width:100%; height:180x; visibility:hidden; z-index: 9999;">${log.digest}</textarea>
 					<div class="clearfix form-actions">
 						<div class="col-md-offset-3 col-md-9">
-							<button class="btn btn-info" id="update" type="button" onclick="update()">
+							<button class="btn btn-info" id="update" type="button">
 								<i class="icon-ok bigger-110"></i>
 								提        交
 							</button>
 
 							&nbsp; &nbsp; &nbsp;
-							<button class="btn" type="reset" onClick="preview()">
+							<button class="btn" type="reset" >
 								<i class="icon-undo bigger-110"></i>
 								预览
 							</button>

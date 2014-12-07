@@ -209,7 +209,7 @@ KindEditor.ready(function(K) {
 										<label for="form-field-1" class="col-sm-3 control-label no-padding-right"> ICP备案信息 </label>
 
 										<div class="col-sm-9">
-											<input type="text" name="icp" value=" ${webs.icp}" class="col-xs-10 col-sm-5" id="form-field-1">
+											<textarea name="icp" class="col-xs-10 col-sm-5" cols="30" rows="3" id="form-field-1">${webs.icp}</textarea>
 										</div>
 									</div>
 									

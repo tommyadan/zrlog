@@ -69,6 +69,7 @@
 							<c:when test="${log.canComment}">
 								<c:choose>
 									<c:when test="${init.webSite.user_comment_pluginStatus==1}">
+										<div id=“comment“>
 										<!-- Duoshuo Comment BEGIN -->
 										<div style="padding:20px;margin-bottom: 20px" class="ds-thread" data-thread-key="${log.logId}"
 											data-title="${log.title}"
@@ -85,6 +86,7 @@
 							})();
 							</script>
 								<!-- Duoshuo Comment END -->
+								</div>
 									</c:when>
 									<c:otherwise>
 									</c:otherwise>

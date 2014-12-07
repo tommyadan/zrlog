@@ -81,7 +81,7 @@
             <div class="gn-scroller">
               <ul class="gn-menu">
                 <li class="gn-search-item">
-                  <form method="post" action="${rurl}/post/search" id="searchform1"><input placeholder="搜索博客" type="search" name="key" class="gn-search">
+                  <form method="post" action="${rurl}post/search" id="searchform1"><input placeholder="搜索博客" type="search" name="key" class="gn-search">
                   <a class="gn-icon icon-search"><span>搜索</span></a></form>
                 </li>
                 
