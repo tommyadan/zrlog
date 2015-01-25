@@ -1,4 +1,6 @@
+<%@page import="java.io.File"%>
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="include/menu.jsp"/>
 
 <script type="text/javascript">
@@ -224,7 +226,23 @@ KindEditor.ready(function(K) {
 										<label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 网站模板 </label>
 
 										<div class="col-sm-9">
-											<input type="text" name="template" value="${webs.template }" class="col-xs-10 col-sm-5" id="form-field-1">
+											<select name="template" value="${webs.template }" class="col-xs-10 col-sm-5" id="form-field-1">
+											<%
+												String webPath=request.getServletContext().getRealPath("/");
+												File[] templates=new File(request.getServletContext().getRealPath("/include/templates/")).listFiles();
+												String strFile[]=new String[templates.length];
+												for(int i=0;i<templates.length;i++){
+													strFile[i]=templates[i].toString().substring(webPath.length()-1).replace("\\", "/");
+												}
+												request.setAttribute("templates", strFile);
+												%>
+												<%												
+											%>
+											<c:forEach var="template" items="${templates}">
+											
+												<option value="<c:out value="${template }"/>"><c:out value="${template }"/></option>
+											</c:forEach>
+											</select>
 										</div>
 									</div>
 									

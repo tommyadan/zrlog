@@ -69,24 +69,7 @@
 							<c:when test="${log.canComment}">
 								<c:choose>
 									<c:when test="${init.webSite.user_comment_pluginStatus==1}">
-										<div id=“comment“>
-										<!-- Duoshuo Comment BEGIN -->
-										<div style="padding:20px;margin-bottom: 20px" class="ds-thread" data-thread-key="${log.logId}"
-											data-title="${log.title}"
-											data-url="${rurl}post/${log.alias}"></div>
-										<script type="text/javascript">
-						var duoshuoQuery = {short_name:"xchun"};
-							(function() {
-								var ds = document.createElement('script');
-								ds.type = 'text/javascript';ds.async = true;
-								ds.src = 'http://static.duoshuo.com/embed.js';
-								ds.charset = 'UTF-8';
-								(document.getElementsByTagName('head')[0] 
-								|| document.getElementsByTagName('body')[0]).appendChild(ds);
-							})();
-							</script>
-								<!-- Duoshuo Comment END -->
-								</div>
+										 <jsp:include page="duoshuo_comment.jsp"></jsp:include>
 									</c:when>
 									<c:otherwise>
 									</c:otherwise>

@@ -73,6 +73,13 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 										个人资料
 									</a>
 								</li>
+								
+								<li>
+									<a href="user_changepassword">
+										<i class="icon-user"></i>
+										更改密码
+									</a>
+								</li>
 
 								<li class="divider"></li>
 
