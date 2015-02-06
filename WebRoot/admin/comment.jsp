@@ -126,7 +126,7 @@
 					{ 	//navbar options
 						edit: false,
 						editicon : 'icon-pencil blue',
-						add: true,
+						add: false,
 						addicon : 'icon-plus-sign purple',
 						del: false,
 						delicon : 'icon-trash red',

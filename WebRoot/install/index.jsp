@@ -14,8 +14,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <link rel="stylesheet" href="install/style.css" type="text/css"></link></head>
   
   <body>
- 
 		<div class="main">
+ 		
 		<form method="post" action="install/testDbConn">
 		<input type="hidden" name="a" value="dbconn">
 		<div id="form_items_3" ><br /><div class="desc"><b>填写数据库信息</b></div><table class="tb2">
@@ -49,6 +49,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<td>用于发送程序错误报告</td>
 		</tr>
 		</table>
+		<div><font color="red" size="3">${errorMsg }</font></div>
 		<table class="tb2">
 		<tr><th class="tbopt" align="left"><font size="3" color="red">${error}&nbsp;</font></th>
 		<td><input type="submit" name="submitname" value="下一步" class="btn">
@@ -57,6 +58,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</tr>
 		
 		</table>
+		
 		</div>
 		</form>
 		</div>

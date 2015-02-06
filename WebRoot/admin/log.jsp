@@ -61,7 +61,7 @@
 				
 				jQuery(grid_selector).jqGrid({
 					
-				url:'<%=request.getAttribute("url")%>/admin/log/list',
+				url:'<%=request.getAttribute("url")%>/admin/log/queryAll',
 				datatype: "json",
 					colNames:['id','标题','关键词', '发布者', '分类','发布时间','编辑','删除'],
 					colModel:[

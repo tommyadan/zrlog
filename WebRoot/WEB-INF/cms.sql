@@ -3,6 +3,8 @@
 
 /*!40101 SET NAMES utf8 */;
 
+DROP TABLE IF EXISTS `comment`, `link`, `log`, `lognav`, `plugin`, `tag`, `type`, `user`, `website`;
+
 #
 # Structure for table "link"
 #

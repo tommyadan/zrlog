@@ -33,9 +33,17 @@
 											
 										</div>
 									</div>
- 
+									<div class="form-group">
+										<label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 是否启用 </label>
+										<div class="col-sm-9">
+										<label>
+ 											<input class="ace ace-switch ace-switch-6" type="checkbox" value="1" checked="checked" name="user_comment_pluginStatus">
+											<span class="lbl">&nbsp;</span>
+										</label>
+										</div>
+									</div>
+									
 									<div class="space-4"></div>
-
 									<div class="clearfix form-actions">
 										<div class="col-md-offset-3 col-md-9">
 											<button id="duoshuo" type="button" class="btn btn-info">
