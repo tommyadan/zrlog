@@ -182,22 +182,7 @@
 							<c:when test="${log.canComment}">
 								<c:choose>
 									<c:when test="${init.webSite.user_comment_pluginStatus==1}">
-										<!-- Duoshuo Comment BEGIN -->
-										<div class="ds-thread" data-thread-key="${log.logId}"
-											data-title="${log.tilte }"
-											data-url="${rurl}post/${log.alias}"></div>
-										<script type="text/javascript">
-						var duoshuoQuery = {short_name:"xchun"};
-							(function() {
-								var ds = document.createElement('script');
-								ds.type = 'text/javascript';ds.async = true;
-								ds.src = 'http://static.duoshuo.com/embed.js';
-								ds.charset = 'UTF-8';
-								(document.getElementsByTagName('head')[0] 
-								|| document.getElementsByTagName('body')[0]).appendChild(ds);
-							})();
-							</script>
-										<!-- Duoshuo Comment END -->
+										 <jsp:include page="../../core/duoshuo_comment.jsp"></jsp:include>
 									</c:when>
 									<c:otherwise>
 										<div id="respond" class="comment-respond">
@@ -222,7 +207,7 @@
 												<input type='hidden' id='YXM_here' />
 												<script type='text/javascript' charset='gbk' id='YXM_script'
 													src='http://api.yinxiangma.com/api3/yzm.yinxiangma.php?pk=0bc4665eded8dfb776e37937a91785c0&v=YinXiangMaJAVASDK_4.0'>
-							</script>
+												</script>
 												<p class="form-submit">
 													<input type="submit" id="sub" value="发表评论" /> <input
 														type='hidden' name='comment_post_ID' value='22'

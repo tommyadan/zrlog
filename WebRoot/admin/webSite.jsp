@@ -226,10 +226,14 @@ KindEditor.ready(function(K) {
 										<label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 网站模板 </label>
 
 										<div class="col-sm-9">
-											<select name="template" value="${webs.template }" class="col-xs-10 col-sm-5" id="form-field-1">
+											<select name="template" class="col-xs-10 col-sm-5" id="form-field-1">
 											<%
-												String webPath=request.getServletContext().getRealPath("/");
-												File[] templates=new File(request.getServletContext().getRealPath("/include/templates/")).listFiles();
+												// need JRE1.7
+												/* String webPath=request.getServletContext().getRealPath("/");
+												File[] templates=new File(request.getServletContext().getRealPath("/include/templates/")).listFiles(); */
+												String webPath=request.getRealPath("/");
+												File[] templates=new File(request.getRealPath("/include/templates/")).listFiles();
+												
 												String strFile[]=new String[templates.length];
 												for(int i=0;i<templates.length;i++){
 													strFile[i]=templates[i].toString().substring(webPath.length()-1).replace("\\", "/");
@@ -239,8 +243,7 @@ KindEditor.ready(function(K) {
 												<%												
 											%>
 											<c:forEach var="template" items="${templates}">
-											
-												<option value="<c:out value="${template }"/>"><c:out value="${template }"/></option>
+												<option  value="<c:out value="${template }"/>" <c:if test="${webs.template eq  template}">selected="selected"</c:if>  ><c:out value="${template }" /></option>
 											</c:forEach>
 											</select>
 										</div>

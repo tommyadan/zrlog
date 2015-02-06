@@ -69,7 +69,7 @@
 							<c:when test="${log.canComment}">
 								<c:choose>
 									<c:when test="${init.webSite.user_comment_pluginStatus==1}">
-										 <jsp:include page="duoshuo_comment.jsp"></jsp:include>
+										 <jsp:include page="../../core/duoshuo_comment.jsp"></jsp:include>
 									</c:when>
 									<c:otherwise>
 									</c:otherwise>

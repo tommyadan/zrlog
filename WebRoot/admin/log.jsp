@@ -63,7 +63,7 @@
 					
 				url:'<%=request.getAttribute("url")%>/admin/log/list',
 				datatype: "json",
-					colNames:['id','Title','Keywords', 'Name', 'type','releaseTime','edit','delete'],
+					colNames:['id','标题','关键词', '发布者', '分类','发布时间','编辑','删除'],
 					colModel:[
 						{name:'id',index:'id', width:40, sorttype:"int", editable: true},
 						{name:'title',index:'title',width:220, sortable:false,editable: true,edittype:"textarea", editoptions:{rows:"2",cols:"20"}},

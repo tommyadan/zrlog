@@ -1,17 +1,7 @@
-﻿<%@page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+﻿<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%
-	String turl = request.getRequestURI();
-	String kurl = request.getRequestURI();
-	String url = request.getScheme() + "://" + request.getHeader("host") +request.getContextPath()+((Map<String,Object>)(((Map<String,Object>)request.getAttribute("init")).get("webSite"))).get("template");
-	request.setAttribute("url", url);
-	request.setAttribute("rurl",request.getScheme() + "://" + request.getHeader("host")+ request.getContextPath()+"/");
-	String suffix="";
-	if(request.getContextPath()+((Map<String,Object>)(((Map<String,Object>)request.getAttribute("init")).get("webSite"))).get("pseudo_static")!=null){
-		suffix=".html";
-	}
-	request.setAttribute("suffix", suffix);
-%>
+
+<jsp:include page="../../core/core_header.jsp"></jsp:include>
 <!DOCTYPE html>
 <html lang="zh" class="no-js">
 <head>

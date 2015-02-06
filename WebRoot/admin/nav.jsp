@@ -50,7 +50,7 @@
 					
 				url:'<%=request.getAttribute("url")%>/admin/nav/queryAll',
 				datatype: "json",
-					colNames:[' ', 'ID','url','navName', 'sort'],
+					colNames:[' ', 'ID','链接','导航名称', '排序'],
 					colModel:[
 						{name:'myac',index:'', width:80, fixed:true, sortable:false, resize:false,
 							formatter:'actions', 

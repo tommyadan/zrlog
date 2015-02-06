@@ -91,15 +91,23 @@ KindEditor.ready(function(K) {
 										<label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 登陆用户名 </label>
 
 										<div class="col-sm-9">
-											<input type="text" name="userName" value="${user.userName }" class="col-xs-10 col-sm-5" placeholder="请求输入网站标题 " id="form-field-1">
+											<input type="text" name="userName" value="${user.userName }" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
 										</div>
 									</div>
+									
+									<%-- <div class="form-group">
+										<label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 邮箱 </label>
+
+										<div class="col-sm-9">
+											<input type="text" name="userName" value="${user.email }" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+										</div>
+									</div> --%>
 									
 									<div class="form-group">
 										<label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 密码 </label>
 
 										<div class="col-sm-9">
-											<input type="text" name="second_title" value="${webs.second_title }" class="col-xs-10 col-sm-5" placeholder="请求输入网站副标题 " id="form-field-1">
+											<input type="text" name="password" value="" class="col-xs-10 col-sm-5" placeholder=" " id="form-field-1">
 											
 										</div>
 									</div>

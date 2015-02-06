@@ -50,7 +50,7 @@
 					
 				url:'<%=request.getAttribute("url")%>/admin/comment/queryAll',
 				datatype: "json",
-					colNames:['id', 'id','url','IP', 'email','userName','logID'],
+					colNames:['', 'ID','评论者主页','IP', '邮箱','昵称','评论文章编号'],
 					colModel:[
 						{name:'myac',index:'commentId', width:80, fixed:true, sortable:false, resize:false,
 							formatter:'actions', 
