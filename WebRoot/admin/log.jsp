@@ -15,8 +15,18 @@
 								</small>
 							</h1>
 						</div><!-- /.page-header -->
-
 						<div class="row">
+							<div class="col-xs-12 col-sm-8">
+								<div class="input-group">
+									<input type="text" placeholder="Type your query" class="form-control search-query">
+									<span class="input-group-btn">
+										<button class="btn btn-purple btn-sm" type="button">
+											Search
+											<i class="icon-search icon-on-right bigger-110"></i>
+										</button>
+									</span>
+								</div>
+							</div>
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
 
@@ -63,14 +73,8 @@
 					
 				url:'<%=request.getAttribute("url")%>/admin/log/queryAll',
 				datatype: "json",
-					colNames:['id','标题','关键词', '发布者', '分类','发布时间','编辑','删除'],
+					colNames:['编辑','删除','id','标题','关键词', '发布者', '分类','发布时间'],
 					colModel:[
-						{name:'id',index:'id', width:40, sorttype:"int", editable: true},
-						{name:'title',index:'title',width:220, sortable:false,editable: true,edittype:"textarea", editoptions:{rows:"2",cols:"20"}},
-						{name:'keywords',index:'keywords', width:160,editable: true,editoptions:{size:"20",maxlength:"30"}},
-						{name:'userName',index:'userName', width:60, editable: false},
-						{name:'typeName',index:'typeName', width:90, editable: true,edittype:"select",editoptions:{value:"FE:FedEx;IN:InTime;TN:TNT;AR:ARAMEX"}},
-						{name:'releaseTime',index:'releaseTime',width:120, editable:true, sorttype:"date",unformat: pickDate},
 						{name:'logId',width:60,index:'logId',formatter:imageFormat},
 						{name:'myac',index:'',sorttype:"int", editable: true, width:60, fixed:true, sortable:false, resize:false,
 							 formatter: 'actions',
@@ -80,8 +84,13 @@
 						       delbutton: true,
 						       delOptions: {recreateForm: true, beforeShowForm:beforeDeleteCallback, url: '<%=request.getAttribute("url")%>/admin/log/delete' }
 						      }
-						},
-
+						},      
+						{name:'id',index:'id', width:40, sorttype:"int", editable: true},
+						{name:'title',index:'title',width:220, sortable:false,editable: true,edittype:"textarea", editoptions:{rows:"2",cols:"20"}},
+						{name:'keywords',index:'keywords', width:160,editable: true,editoptions:{size:"20",maxlength:"30"}},
+						{name:'userName',index:'userName', width:60, editable: false},
+						{name:'typeName',index:'typeName', width:90, editable: true,edittype:"select",editoptions:{value:"FE:FedEx;IN:InTime;TN:TNT;AR:ARAMEX"}},
+						{name:'releaseTime',index:'releaseTime',width:120, editable:true, sorttype:"date",unformat: pickDate},
 					], 
 					viewrecords : true,
 					rowNum:10,
@@ -143,7 +152,7 @@
 						editicon : 'icon-pencil blue',
 						add: false,
 						addicon : 'icon-plus-sign purple',
-						del: false,
+						del: true,
 						delicon : 'icon-trash red',
 						search: false,
 						searchicon : 'icon-search orange',

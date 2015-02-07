@@ -47,6 +47,43 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 
 				<div class="navbar-header pull-right" role="navigation">
 					<ul class="nav ace-nav">
+						<li class="green">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<i class="icon-envelope"></i>
+								<span class="badge badge-success">${init.comments.records}</span>
+							</a>
+		
+							<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+								<li class="dropdown-header">
+									<i class="icon-envelope-alt"></i>
+									${init.comments.records}条消息
+								</li>
+								<c:forEach items="${init.comments.rows}" var="comment">
+								<li>
+									<a href="#">
+										<img alt="Alex's Avatar" class="msg-photo" src="assets/avatars/avatar.png">
+										<span class="msg-body">
+											<span class="msg-title">
+												<span class="blue">${comment.userName}</span>
+												<%-- ${comment.userComment} --%>
+											</span>
+
+											<span class="msg-time">
+												<i class="icon-time"></i>
+												<span>1分钟以前</span>
+											</span>
+										</span>
+									</a>
+								</li>
+								</c:forEach>
+								<li>
+									<a href="comment">
+										查看所有消息
+										<i class="icon-arrow-right"></i>
+									</a>
+								</li>
+							</ul>
+						</li>
 						
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
@@ -131,7 +168,7 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 						
 						<li <c:if test="${'comment.jsp'==suburl}">class="active"</c:if>>
 							<a href="comment" class="dropdown-toggle">
-								<i class="icon-picture"></i>
+								<i class="icon-comment"></i>
 								<span class="menu-text"> 评论管理 </span>
 
 								 
@@ -144,7 +181,7 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 
 						<li <c:if test="${'webSite.jsp'==suburl or 'user.jsp'==suburl}">class="active open"</c:if>>
 							<a href="#" class="dropdown-toggle">
-								<i class="icon-text-width"></i>
+								<i class="icon-cogs"></i>
 								<span class="menu-text"> 设置  </span>
 
 								<b class="arrow icon-angle-down"></b>
@@ -185,13 +222,13 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 								</li>
 								<li>
 									<a href="tag">
-										<i class="icon-double-angle-right"></i>
+										<i class="fa fa-tags"></i>
 										查看标签
 									</a>
 								</li>
 								<li <c:if test="${'link.jsp'==suburl}">class="active"</c:if>>
 							<a href="link" class="dropdown-toggle">
-								<i class="icon-list-alt"></i>
+								<i class="icon-external-link"></i>
 								<span class="menu-text"> 链接管理 </span>
 							</a>
 						</li>

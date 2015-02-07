@@ -1,6 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <jsp:include page="include/menu.jsp"/>
-		
+<script src="js/set_update.js"></script>		
 					<div class="page-content">
 						<div class="page-header">
 							<h1>
@@ -15,13 +15,14 @@
 						<div class="row">
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
-
+								
 								<form role="form" id="ajaxyunstore" class="form-horizontal">
+									<input type="hidden" value="qiniu" name="bucket_type">
 									<div class="form-group"> 
 										<label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 七牛  ACESS_KEY </label>
 
 										<div class="col-sm-9">
-											<input type="text" name="userName" value="${webs.ACESS_KEY }" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+											<input type="text" name="qiniu_access_key" value="${webs.qiniu_access_key }" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
 										</div>
 									</div>
 									
@@ -29,7 +30,7 @@
 										<label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 七牛 SECRET_KEY </label>
 
 										<div class="col-sm-9">
-											<input type="text" name="second_title" value="${webs.SECRET_KEY}" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+											<input type="text" name="qiniu_secret_key" value="${webs.qiniu_secret_key}" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
 											
 										</div>
 									</div>
@@ -38,7 +39,7 @@
 										<label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 七牛HOST </label>
 
 										<div class="col-sm-9">
-										<input type="text" name="second_title" value="${webs.host}" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+										<input type="text" name="qiniu_host" value="${webs.qiniu_host}" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
 											
 										</div>
 									</div>

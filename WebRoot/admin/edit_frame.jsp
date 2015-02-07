@@ -108,7 +108,7 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 	  		<input type="hidden" value="${log.logId}" name="logId">
 		    <input name="title" id="title" size="60" maxlength="60"  value="${log.title}" class="col-xs-10 col-sm-5" type="text" placeholder="请输入文章标题"></input>
 		    <div class="col-xs-3">
-		    <select name="typeId" id="form-field-select-1" class="form-control">
+		    <select name="typeId" id="form-field-select-3" class="form-control">
 			  <c:forEach items="${init.types}" var="type">
 			    <option value="${type.id}">${type.typeName}</option>
 			  </c:forEach>
@@ -122,10 +122,12 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 	<hr/>
 
 
-	<input value="${log.keywords}" name="keywords" id="inp" size="60" maxlength="60" /><br/>
+	<input value="${log.keywords}" name="keywords" id="inp" size="60" maxlength="60" /><hr/>
+			<div class="tags" style="width: 100%">
 			<c:forEach items="${init.tags}" var="tags">
-				<a class="tag">${tags.text}</a>&nbsp;
+				<span class="tag">${tags.text}</span>
 			</c:forEach>
+			</div>
 			<hr/>
 		<div class="col-xs-3">
 		<label>

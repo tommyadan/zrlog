@@ -44,6 +44,7 @@ request.setAttribute("url", request.getScheme()+"://"+request.getHeader("host")+
 											<div class="space-6"></div>
 
 											<form action="login" method="post">
+												<input type="hidden" name="redirectFrom" value="${param.redirectFrom}">
 												<fieldset>
 													<label class="block clearfix">
 														<span class="block input-icon input-icon-right">

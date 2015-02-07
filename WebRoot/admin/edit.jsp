@@ -37,7 +37,7 @@
 
 <script type="text/javascript">
 
-	function checkSubmit() {
+	/* function checkSubmit() {
 		if(document.getElementById("title").value=="" || document.getElementById("content").value=="")
 		{
 			document.getElementById("msg").innerHTML="文章的标题和内容都不能为空。。。。。";
@@ -45,19 +45,27 @@
 		}
 		document.getElementById("type").value = "add";
 		document.getElementById("addorPre").submit();
-	}
+	} */
 	function preview() {
-		document.getElementById("type").value = "preview";
+		//window.open('${url }/admin/log/preview');
+		//location="${url }/admin/log/preview";
 		document.getElementById("addorPre").submit();
-	}
-	function update() {
-		document.getElementById("type").value = "update";
-		document.getElementById("addorPre").submit();
+		return false;
 	}
 </script>
 <script type="text/javascript">
 	
 	$(function(){
+		
+		function autoSave(){
+			$.post('${url}/admin/log/addToSession',$('#addorPre').serialize(),function(data){
+				if(data.add){
+					$("#msg").text("自动保存成功 "+new Date());
+				}
+			});
+		}
+		setInterval(autoSave,10000*6); 
+		
 		var $tags=$("#inp");
 		$(".tag").click(function(e){
 			$tags.val($tags.val()+$(this).text()+",");
@@ -75,7 +83,8 @@
 				}
 			});
 		});
-		$("#submit").click(function(){
+		
+		$("#add").click(function(){
 			$.post('${url}/admin/log/add',$('#addorPre').serialize(),function(data){
 				if(data.add){
 					alert("发表成功");
@@ -83,7 +92,7 @@
 			});
 		});
 			
-	});
+	}); 
 </script>
 	<div class="page-content">
 		<div class="page-header">
@@ -95,8 +104,8 @@
 				</small>
 			</h1>
 		</div><!-- /.page-header -->
-	<div id="msg"></div>
-	<form class="form-horizontal" role="form" id="addorPre" method="post">
+	<div id="msg" class="alert alert-block alert-success"></div>
+	<form target="_blank" class="form-horizontal" role="form" id="addorPre" method="post" action="${url }/admin/log/preview">
 		<input type="hidden" id="type">
 	  <c:choose>
 	  	<c:when test="${empty requestScope.log}">
@@ -116,10 +125,12 @@
 	<hr/>
 
 
-	<input value="" name="keywords" id="inp" size="60" maxlength="60" /><br/>
+			<input value="" name="keywords" id="inp" size="60" maxlength="60" /><hr/>
+			<div class="tags" style="width: 100%">
 			<c:forEach items="${init.tags}" var="tags">
-				<a class="tag">${tags.text}</a>&nbsp;
+				<span class="tag">${tags.text}</span>
 			</c:forEach>
+			</div>
 			<hr/>
 		<div class="col-xs-3">
 		<label>
@@ -137,13 +148,13 @@
 					<textarea name="digest" cols="100" rows="8"  id="digest" style="width:100%; height:180x; visibility:hidden; z-index: 9999;"></textarea>
 					<div class="clearfix form-actions">
 						<div class="col-md-offset-3 col-md-9">
-							<button class="btn btn-info" id="submit" type="button">
+							<button class="btn btn-info" id="add" type="button">
 								<i class="icon-ok bigger-110"></i>
 								提        交
 							</button>
 
 							&nbsp; &nbsp; &nbsp;
-							<button class="btn" type="reset" onClick="preview()">
+							<button class="btn" type="button" onClick="preview()">
 								<i class="icon-undo bigger-110"></i>
 								预览
 							</button>
@@ -152,5 +163,5 @@
 	  	</c:when>
 	    </c:choose>
 	</form>
-	
+
 <jsp:include page="include/footer.jsp"/>

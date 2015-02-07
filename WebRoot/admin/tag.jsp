@@ -50,7 +50,7 @@
 					
 				url:'<%=request.getAttribute("url")%>/admin/tag/queryAll',
 				datatype: "json",
-					colNames:['ID','text','count'],
+					colNames:['ID','标签名','计数'],
 					colModel:[
 						 
 						{name:'id',index:'id', width:60, sorttype:"int", editable: false},
@@ -82,7 +82,7 @@
 					},
 			
 					editurl:"<%=request.getAttribute("url")%>/admin/type/oper",//nothing is saved
-					caption: "分类管理",
+					caption: "标签",
 					height:500,
 			
 					autowidth: true

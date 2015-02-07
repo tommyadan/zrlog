@@ -93,6 +93,7 @@
 					},
 			
 					editurl:"<%=request.getAttribute("url")%>/admin/comment/oper",//nothing is saved
+					deleteurl:"<%=request.getAttribute("url")%>/admin/comment/oper",//nothing is saved
 					caption: "评论管理",
 					height:500,
 			
@@ -128,7 +129,7 @@
 						editicon : 'icon-pencil blue',
 						add: false,
 						addicon : 'icon-plus-sign purple',
-						del: false,
+						del: true,
 						delicon : 'icon-trash red',
 						search: false,
 						searchicon : 'icon-search orange',
