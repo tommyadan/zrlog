@@ -106,12 +106,9 @@
 		</div><!-- /.page-header -->
 	<div id="msg" class="alert alert-block alert-success"></div>
 	<form target="_blank" class="form-horizontal" role="form" id="addorPre" method="post" action="${url }/admin/log/preview">
-		<input type="hidden" id="type">
-	  <c:choose>
-	  	<c:when test="${empty requestScope.log}">
-		    <input name="title" id="title" size="60" maxlength="60"  class="col-xs-10 col-sm-5" type="text" placeholder="请输入文章标题"></input>
+		    <input name="title" id="title" size="60" maxlength="60"  value="${session.log.title}" class="col-xs-10 col-sm-5" type="text" placeholder="请输入文章标题"></input>
 		    <div class="col-xs-3">
-		    <select name="typeId" id="form-field-select-1" class="form-control">
+		    <select name="typeId" id="form-field-select-3" class="form-control">
 			  <c:forEach items="${init.types}" var="type">
 			    <option value="${type.id}">${type.typeName}</option>
 			  </c:forEach>
@@ -120,12 +117,12 @@
 			<hr>
 			 <textarea
 						name="content" cols="100" rows="8"  id="content"
-						style="width:100%; height:500px; visibility:hidden; z-index: 9999;"></textarea>
+						style="width:100%; height:500px; visibility:hidden; z-index: 9999;">${session.log.content}</textarea>
 
 	<hr/>
 
 
-			<input value="" name="keywords" id="inp" size="60" maxlength="60" /><hr/>
+	<input value="${session.log.keywords}" name="keywords" id="inp" size="60" maxlength="60" /><hr/>
 			<div class="tags" style="width: 100%">
 			<c:forEach items="${init.tags}" var="tags">
 				<span class="tag">${tags.text}</span>
@@ -145,8 +142,7 @@
 			<span class="lbl">&nbsp;推荐吗</span>
 		</label>
 	</div>
-					<textarea name="digest" cols="100" rows="8"  id="digest" style="width:100%; height:180x; visibility:hidden; z-index: 9999;"></textarea>
-					<div class="clearfix form-actions">
+					<textarea name="digest" cols="100" rows="8"  id="digest" style="width:100%; height:180x; visibility:hidden; z-index: 9999;">${session.log.digest}</textarea><div class="clearfix form-actions">
 						<div class="col-md-offset-3 col-md-9">
 							<button class="btn btn-info" id="add" type="button">
 								<i class="icon-ok bigger-110"></i>
@@ -160,8 +156,6 @@
 							</button>
 						</div>
 					</div>
-	  	</c:when>
-	    </c:choose>
 	</form>
 
 <jsp:include page="include/footer.jsp"/>

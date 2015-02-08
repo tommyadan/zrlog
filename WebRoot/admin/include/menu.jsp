@@ -50,15 +50,15 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 						<li class="green">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 								<i class="icon-envelope"></i>
-								<span class="badge badge-success">${init.comments.records}</span>
+								<span class="badge badge-success">${session.comments.records}</span>
 							</a>
 		
 							<ul class="pull-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
 								<li class="dropdown-header">
 									<i class="icon-envelope-alt"></i>
-									${init.comments.records}条消息
+									${session.comments.records}条消息
 								</li>
-								<c:forEach items="${init.comments.rows}" var="comment">
+								<c:forEach items="${session.comments.rows}" var="comment">
 								<li>
 									<a href="#">
 										<img alt="Alex's Avatar" class="msg-photo" src="assets/avatars/avatar.png">
