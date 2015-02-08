@@ -110,7 +110,7 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 		    <div class="col-xs-3">
 		    <select name="typeId" id="form-field-select-3" class="form-control">
 			  <c:forEach items="${init.types}" var="type">
-			    <option value="${type.id}">${type.typeName}</option>
+			    <option <c:if test="${type.id eq log.typeId}">selected="selected"</c:if> value="${type.id}">${type.typeName}</option>
 			  </c:forEach>
 			</select>
 			</div>

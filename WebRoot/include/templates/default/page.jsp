@@ -32,7 +32,6 @@
 		以下是与${tipsType} “${tipsName}” 相关联的文章
 	</h2>
 	</c:if>
-	${comments }
 	<c:if test="${not empty requestScope.data}">
 				<c:forEach var="log" items="${requestScope.data.rows}">
                 <article class="entry">

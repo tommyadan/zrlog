@@ -20,7 +20,9 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 		<link rel="stylesheet" href="assets/css/ace.min.css" />
 		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
 		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
-
+		
+		
+		<link rel="shortcut icon" href="${url}/favicon.ico" />
 		<script src="assets/js/jquery-2.0.3.min.js"></script>
 		<script src="assets/js/bootstrap.min.js"></script>
 		<script src="assets/js/typeahead-bs2.min.js"></script>
@@ -192,38 +194,39 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 								<li>
 									<a href="user" <c:if test="${'user.jsp'==suburl}">class="active"</c:if>>
 										<i class="icon-double-angle-right"></i>
-										个人信息
+										<span class="menu-text">个人信息</span>
 									</a>
 								</li>
 								<li>
 									<a href="webSite" <c:if test="${'webSite.jsp'==suburl}">class="active"</c:if>>
 										<i class="icon-double-angle-right"></i>
-										网站设置
+										<span class="menu-text">网站设置</span>
 									</a>
 								</li>
 							</ul>
 						</li>
 
 
-						<li <c:if test="${'type.jsp'==suburl or 'tag.jsp'==suburl }">class="active open"</c:if>>
+						<li <c:if test="${'type.jsp'==suburl or 'tag.jsp'==suburl or  'plugin.jsp'==suburl or 'nav.jsp'==suburl or 'link.jsp'==suburl}">class="active open"</c:if>>
 							<a href="#" class="dropdown-toggle">
 								<i class="icon-list"></i>
-								其他
-								<b class="arrow icon-angle-down"></b>
+								<span class="menu-text">
+									其他
+								</span>
 							</a>
 
 							<ul class="submenu">
 
 								<li>
-									<a href="type">
+									<a href="type" <c:if test="${'type.jsp'==suburl}">class="active"</c:if>>
 										<i class="icon-double-angle-right"></i>
-										分类管理
+										<span class="menu-text">分类管理</span>
 									</a>
 								</li>
 								<li>
-									<a href="tag">
+									<a href="tag" <c:if test="${'tag.jsp'==suburl}">class="active"</c:if>>
 										<i class="fa fa-tags"></i>
-										查看标签
+										<span class="menu-text">查看标签</span>
 									</a>
 								</li>
 								<li <c:if test="${'link.jsp'==suburl}">class="active"</c:if>>

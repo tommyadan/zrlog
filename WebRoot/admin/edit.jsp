@@ -110,14 +110,14 @@
 		    <div class="col-xs-3">
 		    <select name="typeId" id="form-field-select-3" class="form-control">
 			  <c:forEach items="${init.types}" var="type">
-			    <option value="${type.id}">${type.typeName}</option>
+			    <option <c:if test="${type.id eq session.log.typeId}">selected="selected"</c:if> value="${type.id}">${type.typeName}</option>
 			  </c:forEach>
 			</select>
 			</div>
 			<hr>
 			 <textarea
 						name="content" cols="100" rows="8"  id="content"
-						style="width:100%; height:500px; visibility:hidden; z-index: 9999;">${session.log.content}</textarea>
+						style="width:100%; height:350px; visibility:hidden; z-index: 9999;">${session.log.content}</textarea>
 
 	<hr/>
 

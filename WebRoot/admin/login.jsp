@@ -1,4 +1,5 @@
 ﻿<%@page import="com.jfinal.i18n.I18N"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
@@ -15,6 +16,8 @@ request.setAttribute("url", request.getScheme()+"://"+request.getHeader("host")+
 		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="assets/css/ace.min.css" />
 		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		
+		<link rel="shortcut icon" href="${url}/favicon.ico" />
 	</head>
 
 	<body class="login-layout">
@@ -31,7 +34,6 @@ request.setAttribute("url", request.getScheme()+"://"+request.getHeader("host")+
 							</div>
 
 							<div class="space-6"></div>
-
 							<div class="position-relative">
 								<div id="login-box" class="login-box visible widget-box no-border">
 									<div class="widget-body">
@@ -61,7 +63,10 @@ request.setAttribute("url", request.getScheme()+"://"+request.getHeader("host")+
 													</label>
 
 													<div class="space"></div>
-
+													<div class="alert alert-danger" <c:if test="${empty errorMsg }">style="display: none;"</c:if> >
+														${errorMsg}														 
+													</div>
+ 
 													<div class="clearfix">
 														<label class="inline">
 															<input type="checkbox" name="rememberMe" class="ace" />
@@ -73,7 +78,7 @@ request.setAttribute("url", request.getScheme()+"://"+request.getHeader("host")+
 															登陆
 														</button>
 													</div>
-
+													
 													<div class="space-4"></div>
 												</fieldset>
 											</form>

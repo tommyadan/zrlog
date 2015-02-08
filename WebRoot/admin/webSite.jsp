@@ -2,59 +2,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="include/menu.jsp"/>
-
-<script type="text/javascript">
-	
-	$(function(){
-		$("#baseMsgSubmit").click(function(){
-			if($("#form-field-1").val().length!=0 ){
-				
-				$.post('website/update',$('#baseMsg').serialize(),function(data){
-					if(data.success){
-						alert('操作成功！');
-						location.href = location.href;
-					}else{
-						alert('erro:服务器返回了一个错误，操作失败！\n请联系开发人员！！！');
-					}
-				});
-			}else{
-				alert('目录,名称,封面都不能为空');
-			}
-		});
-		$("#otherMsgSubmit").click(function(){
-			if($("#form-field-1").val().length!=0 ){
-				
-				$.post('website/update',$('#otherMsg').serialize(),function(data){
-					if(data.success){
-						alert('操作成功！');
-						location.href = location.href;
-					}else{
-						alert('erro:服务器返回了一个错误，操作失败！\n请联系开发人员！！！');
-					}
-				});
-			}else{
-				alert('目录,名称,封面都不能为空');
-			}
-		});
-		$("#emailServiceSubmit").click(function(){
-			if($("#form-field-1").val().length!=0 ){
-				
-				$.post('website/update',$('#emailServiceMsg').serialize(),function(data){
-					if(data.success){
-						alert('操作成功！');
-						location.href = location.href;
-					}else{
-						alert('erro:服务器返回了一个错误，操作失败！\n请联系开发人员！！！');
-					}
-				});
-			}else{
-				alert('目录,名称,封面都不能为空');
-			}
-		});
-		
-	});
-</script>
-
+<script type="text/javascript" src="js/set_update.js"></script>
 <link rel="stylesheet" href="${url}/admin/editor/themes/default/default.css" />
 <script src="${url}/admin/editor/kindeditor-min.js"></script>
 		
@@ -122,7 +70,7 @@ KindEditor.ready(function(K) {
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
 
-								<form role="form" class="form-horizontal" id="baseMsg">
+								<form role="form" class="form-horizontal" id="ajaxbaseMsg">
 									<div class="form-group">
 										<label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 网站标题 </label>
 
@@ -173,7 +121,7 @@ KindEditor.ready(function(K) {
 
 									<div class="clearfix form-actions">
 										<div class="col-md-offset-3 col-md-9">
-											<button id="baseMsgSubmit" type="button" class="btn btn-info">
+											<button id="baseMsg" type="button" class="btn btn-info">
 												<i class="icon-ok bigger-110"></i>
 												提交
 											</button>
@@ -206,7 +154,7 @@ KindEditor.ready(function(K) {
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
 
-								<form role="form" class="form-horizontal" id="otherMsg">
+								<form role="form" class="form-horizontal" id="ajaxotherMsg">
 									<div class="form-group">
 										<label for="form-field-1" class="col-sm-3 control-label no-padding-right"> ICP备案信息 </label>
 
@@ -254,7 +202,7 @@ KindEditor.ready(function(K) {
 
 									<div class="clearfix form-actions">
 										<div class="col-md-offset-3 col-md-9">
-											<button id="otherMsgSubmit" type="button" class="btn btn-info">
+											<button id="otherMsg" type="button" class="btn btn-info">
 												<i class="icon-ok bigger-110"></i>
 												提交
 											</button>
@@ -286,7 +234,7 @@ KindEditor.ready(function(K) {
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
 
-								<form role="form" class="form-horizontal" id="emailServiceMsg">
+								<form role="form" class="form-horizontal" id="ajaxemailServiceMsg">
 									<div class="form-group">
 										<label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 登陆名 </label>
 
@@ -315,7 +263,7 @@ KindEditor.ready(function(K) {
 
 									<div class="clearfix form-actions">
 										<div class="col-md-offset-3 col-md-9">
-											<button id="emailServiceSubmit" type="button" class="btn btn-info">
+											<button id="emailServiceMsg" type="button" class="btn btn-info">
 												<i class="icon-ok bigger-110"></i>
 												提交
 											</button>
