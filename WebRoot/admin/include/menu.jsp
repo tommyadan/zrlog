@@ -89,10 +89,10 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 						
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="${user.header}" alt="${user.userName}" />
+								<img class="nav-user-photo" src="${session.user.header}" alt="${session.user.userName}" />
 								<span class="user-info">
 									<small>欢迎光临,</small>
-									${user.userName}
+									${session.user.userName}
 								</span>
 
 								<i class="icon-caret-down"></i>

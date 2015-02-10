@@ -3,7 +3,7 @@
 
 					<footer id="colophon" role="contentinfo">
 						<div id="site-generator">
-							<a href="${rurl}/sitemap.xml" target="_blank">网站地图</a>&nbsp;&copy;copyright 2012-2013&nbsp;&nbsp;
+							<a href="${rurl}sitemap.xml" target="_blank">网站地图</a>&nbsp;&copy;copyright 2012-2013&nbsp;&nbsp;
 							${webs.icp}
 			 			</div>
 					</footer>

@@ -126,12 +126,16 @@
 						<c:choose>
 							<c:when test="${log.canComment}">
 								<c:choose>
-									<c:when test="${not empty requestScope.comm}">
-										<c:forEach var="comm" items="${requestScope.comm}">
-
-											<h2 id="comments-title">
+									<c:when test="${init.webSite.user_comment_pluginStatus}">
+										 <jsp:include page="../../core/duoshuo_comment.jsp"></jsp:include>
+									</c:when>
+									<c:otherwise>
+									<h2 id="comments-title">
 												《<span>${log.title }</span>》上有 ${log.commentSize} 条评论
 											</h2>
+											<c:forEach var="comm" items="${requestScope.log.comments}">
+
+											
 											<ol class="commentlist">
 
 												<li class="comment even thread-even depth-1"
@@ -156,7 +160,6 @@
 														</footer>
 
 														<div class="comment-content">
-															c
 															<p>${comm.userComment}</p>
 														</div>
 
@@ -171,36 +174,23 @@
 
 											</ol>
 										</c:forEach>
-									</c:when>
-									<c:otherwise></c:otherwise>
-								</c:choose>
-							</c:when>
-							<c:otherwise></c:otherwise>
-						</c:choose>
-
-						<c:choose>
-							<c:when test="${log.canComment}">
-								<c:choose>
-									<c:when test="${init.webSite.user_comment_pluginStatus==1}">
-										 <jsp:include page="../../core/duoshuo_comment.jsp"></jsp:include>
-									</c:when>
-									<c:otherwise>
+									
+									
 										<div id="respond" class="comment-respond">
-											<form action="${rurl}" method="post" id="commentform"
+											<form action="${rurl}post/addComment" method="post" id="commentform"
 												class="comment-form">
-												<input type="hidden" name="id" value="${log.logId}" /> <input
-													type="hidden" name="comment" value="add" />
+												<input type="hidden" name="logId" value="${log.logId}" />
 												<p class="comment-notes">
 													必填项已用<span class="required">*</span>标注
 												</p>
 												<p class="comment-form-author">
 													<label for="author">姓名 <span class="required">*</span>
-													</label> <input id="author" name="name" type="text" value=""
+													</label> <input id="author" name="userName" type="text" value=""
 														size="30" aria-required='true' />
 												</p>
 												<p class="comment-form-comment">
 													<label for="comment">评论</label>
-													<textarea id="comment" name="message" cols="45" rows="8"
+													<textarea id="comment" name="userComment" cols="45" rows="8"
 														aria-required="true"></textarea>
 
 												</p>

@@ -15,12 +15,12 @@
 							<div class="col-xs-12">
 								<!-- PAGE CONTENT BEGINS -->
 
-								<form role="form" id="user" class="form-horizontal">
+								<form role="form" action="${url}/admin/changePassword" id="user" class="form-horizontal" method="post">
 									<div class="form-group"> 
 										<label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 旧密码 </label>
 
 										<div class="col-sm-9">
-											<input type="text" name="userName" value="" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+											<input type="text" name="oldPassword" value="" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
 										</div>
 									</div>
 									
@@ -28,7 +28,7 @@
 										<label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 新密码 </label>
 
 										<div class="col-sm-9">
-											<input type="text" name="second_title" value="" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+											<input type="text" name="newPassword" value="" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
 											
 										</div>
 									</div>
@@ -37,7 +37,7 @@
 										<label for="form-field-1" class="col-sm-3 control-label no-padding-right"> 确认密码 </label>
 
 										<div class="col-sm-9">
-										<input type="text" name="second_title" value="" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
+										<input type="text" name="newPassword2" value="" class="col-xs-10 col-sm-5" placeholder="" id="form-field-1">
 											
 										</div>
 									</div>
@@ -45,16 +45,11 @@
 
 									<div class="clearfix form-actions">
 										<div class="col-md-offset-3 col-md-9">
-											<button id="yunstore" type="button" class="btn btn-info">
+											<button id="submit" type="submit" class="btn btn-info">
 												<i class="icon-ok bigger-110"></i>
 												提交
 											</button>
-
-											&nbsp; &nbsp; &nbsp;
-											<button type="reset" class="btn">
-												<i class="icon-undo bigger-110"></i>
-												重置
-											</button>
+											 
 										</div>
 									</div>
 
