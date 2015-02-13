@@ -10,13 +10,12 @@
 <html>
   <head>
     <base href="<%=basePath%>">
-    <title>jblog 安装向导</title>
-    <link rel="stylesheet" href="install/style.css" type="text/css"></link></head>
+    <title>zrlog 安装向导</title>
 	
   </head>
   <body>
-  	<div class="main">
+  	<div align="center">
 		已经安装过了
-		</div>
+	</div>
   </body>
 </html>

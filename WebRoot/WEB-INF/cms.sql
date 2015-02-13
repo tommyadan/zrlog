@@ -72,7 +72,8 @@ CREATE TABLE `type` (
   `alias` varchar(255) DEFAULT NULL,
   `remark` varchar(255) DEFAULT NULL,
   `typeName` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`typeId`)
+  PRIMARY KEY (`typeId`),
+  UNIQUE KEY `alias` (`alias`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 #
@@ -85,6 +86,7 @@ CREATE TABLE `user` (
   `email` varchar(255) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
   `userName` varchar(255) DEFAULT NULL,
+  `header` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`userId`),
   UNIQUE KEY `UK_hl8fftx66p59oqgkkcfit3eay` (`userName`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
@@ -130,6 +132,7 @@ CREATE TABLE `comment` (
   `userMail` varchar(255) DEFAULT NULL,
   `userName` varchar(255) DEFAULT NULL,
   `logId` int(11) DEFAULT NULL,
+  `idRead` bit(1) DEFAULT NULL,
   PRIMARY KEY (`commentId`),
   KEY `FK_lcq3rf9ld0x969wbel2c1gwou` (`logId`),
   CONSTRAINT `FK_lcq3rf9ld0x969wbel2c1gwou` FOREIGN KEY (`logId`) REFERENCES `log` (`logId`)

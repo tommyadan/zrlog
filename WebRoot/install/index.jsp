@@ -10,7 +10,7 @@
 <html>
   <head>
     <base href="<%=basePath%>">
-    <title>jblog 安装向导</title>
+    <title>zrlog 安装向导</title>
 		<link href="install/assets/css/bootstrap.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="install/assets/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="install/assets/css/ace.min.css" />
@@ -111,16 +111,6 @@
 																	</div>
 																</div>
 
-																<div class="space-8"></div>
-
-																<div class="form-group">
-																	<div class="col-xs-12 col-sm-4 col-sm-offset-3">
-																		<label>
-																			<input type="checkbox" class="ace" id="agree" name="agree">
-																			<span class="lbl"> I accept the policy</span>
-																		</label>
-																	</div>
-																</div>
 																<div class="row-fluid wizard-actions">
 																<button data-last="Finish " class="btn btn-success btn-next">
 																Next

@@ -10,7 +10,7 @@
 <html>
   <head>
     <base href="<%=basePath%>">
-    <title>jblog 安装向导</title>
+    <title>zrlog 安装向导</title>
 		<link href="install/assets/css/bootstrap.min.css" rel="stylesheet" />
 		<link rel="stylesheet" href="install/assets/css/font-awesome.min.css" />
 		<link rel="stylesheet" href="install/assets/css/ace.min.css" />

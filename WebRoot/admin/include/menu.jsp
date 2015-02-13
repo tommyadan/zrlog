@@ -69,11 +69,6 @@ request.setAttribute("suburl", request.getRequestURL().substring(basePath.length
 												<span class="blue">${comment.userName}</span>
 												<%-- ${comment.userComment} --%>
 											</span>
-
-											<span class="msg-time">
-												<i class="icon-time"></i>
-												<span>1分钟以前</span>
-											</span>
 										</span>
 									</a>
 								</li>

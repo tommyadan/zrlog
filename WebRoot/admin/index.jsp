@@ -26,7 +26,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 									欢迎使用
 									<strong class="green">
 										zrlog 日志管理系统
-										<small>(v2.1.1)</small>
+										<small>(${init.version})</small>
 									</strong>
 									,轻量级好用的日志管理系统.
 								</div>
